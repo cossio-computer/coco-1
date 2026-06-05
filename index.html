@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CoCo-1 BASIC Microcomputer - El microordenador personal que une la nostalgia de los 80 con la tecnología de hoy.">
+  <meta name="keywords" content="CoCo-1, microordenador, BASIC, MMBasic, retro, retro computing, SBC">
+  <meta name="author" content="COSSIO COMPUTER">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CoCo-1 BASIC Microcomputer">
+  <meta property="og:description" content="El microordenador personal que une la nostalgia de los 80 con la tecnología de hoy.">
+  <meta property="og:type" content="product">
+  <meta property="og:locale" content="es_ES">
+
+  <title>CoCo-1 BASIC Microcomputer | COSSIO COMPUTER</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/Logo-empresa.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <img src="images/Logo-empresa.png" alt="COSSIO COMPUTER Logo">
+        <span>CoCo-1</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features" data-i18n="nav_features">Características</a></li>
+        <li><a href="#showcase" data-i18n="nav_showcase">Producto</a></li>
+        <li><a href="#testimonials" data-i18n="nav_testimonials">Testimonios</a></li>
+        <li><a href="#preorder" data-i18n="nav_preorder">Reservar</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <button class="mobile-menu-btn" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <div class="hero-badge">
+          <span>🚀</span>
+          <span id="heroBadge">¡Lanzamiento Junio 2026!</span>
+        </div>
+
+        <h1>
+          <span id="heroTitle">CoCo-1</span>
+          <span id="heroTitleSuffix"> BASIC Microcomputer</span>
+        </h1>
+
+        <p class="hero-description" id="heroDescription">
+          El microordenador personal que une la nostalgia de los 80 con la tecnología de hoy. Perfecto para aprender, programar y revivir la magia de la era dorada de la computación.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#preorder" class="btn btn-primary" id="heroCtaPrimary">
+            Reservar ahora
+          </a>
+          <a href="#showcase" class="btn btn-secondary" id="heroCtaSecondary">
+            Saber más
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image fade-in">
+        <img src="images/CoCo-1-placa.png" alt="CoCo-1 Microcomputer">
+        <div class="price-badge">
+          <div class="launch-price" id="launchPriceLabel">Precio Lanzamiento</div>
+          <div class="old-price" id="oldPrice">49€</div>
+          <div class="new-price" id="newPrice">39€</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FEATURES SECTION
+       ============================================ -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 id="featuresTitle">Características</h2>
+        <p id="featuresSubtitle">Todo lo que necesitas en un microordenador compacto y potente</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🖥️</div>
+          <h3 id="feature1Title">Salida VGA</h3>
+          <p id="feature1Desc">640x480 monocromo o 320x240 color con 16 colores. Generada por la segunda CPU sin afectar al BASIC.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">⌨️</div>
+          <h3 id="feature2Title">Teclado USB</h3>
+          <p id="feature2Desc">Compatible con cualquier teclado PC estándar. Configurable para ES, US, UK, DE, FR.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">💻</div>
+          <h3 id="feature3Title">BASIC avanzado</h3>
+          <p id="feature3Desc">Intérprete MMBasic con aritmética 64 bits, matrices multidimensionales, funciones de usuario y más.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">💾</div>
+          <h3 id="feature4Title">Almacenamiento SD</h3>
+          <p id="feature4Desc">Tarjeta SD hasta 32GB FAT16/FAT32. LED de actividad para lectura/escritura.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🎮</div>
+          <h3 id="feature5Title">Gráficos y sonido</h3>
+          <p id="feature5Desc">Gráficos 16 colores, 8 fuentes, sonido estéreo PWM 1W. Juegos y visualizaciones.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🔌</div>
+          <h3 id="feature6Title">Puerto de expansión</h3>
+          <p id="feature6Desc">11 pines configurables como E/S digital o analógica. RTC, RS232, USB-C.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PRODUCT SHOWCASE
+       ============================================ -->
+  <section class="showcase" id="showcase">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 id="showcaseTitle">Diseñado para ti</h2>
+        <p id="showcaseSubtitle">Explora las posibilidades del CoCo-1</p>
+      </div>
+
+      <div class="showcase-grid">
+        <div class="showcase-image fade-in">
+          <img src="images/CoCo-1-placa-front.png" alt="CoCo-1 Front View">
+          <img src="images/CoCo-1-placa.png" alt="CoCo-1 PCB">
+          <img src="images/CoCo-1-placa-rear.png" alt="CoCo-1 Back View">
+          <img src="images/CoCo-1-placa-top.png" alt="CoCo-1 Top View">
+        </div>
+
+        <div class="showcase-content fade-in">
+          <h3 id="showcaseFeatures">Características Principales</h3>
+
+          <ul class="showcase-list">
+            <li>
+              <span class="check"></span>
+              <span id="checkVga">Salida VGA estándar</span>
+            </li>
+            <li>
+              <span class="check"></span>
+              <span id="checkKeyboard">Teclado USB universal</span>
+            </li>
+            <li>
+              <span class="check"></span>
+              <span id="checkBasic">Intérprete BASIC avanzado</span>
+            </li>
+            <li>
+              <span class="check"></span>
+              <span id="checkSd">Almacenamiento SD</span>
+            </li>
+            <li>
+              <span class="check"></span>
+              <span id="checkSound">Sonido estéreo</span>
+            </li>
+            <li>
+              <span class="check"></span>
+              <span id="checkExpansion">Puerto de expansión</span>
+            </li>
+            <li>
+              <span class="check"></span>
+              <span id="checkRtc">Reloj en tiempo real</span>
+            </li>
+            <li>
+              <span class="check"></span>
+              <span id="checkSerial">Puertos RS232</span>
+            </li>
+          </ul>
+
+          <div class="specs-table">
+            <table>
+              <tr>
+                <td>CPU</td>
+                <td>RP2040 Dual Core ARM</td>
+              </tr>
+              <tr>
+                <td id="specsTitle">Especificaciones</td>
+                <td>100,000 líneas BASIC/s</td>
+              </tr>
+              <tr>
+                <td>Memoria</td>
+                <td>264 KB disponibles</td>
+              </tr>
+              <tr>
+                <td>Almacenamiento</td>
+                <td>SD hasta 32GB</td>
+              </tr>
+              <tr>
+                <td>Display</td>
+                <td>VGA 640x480 / 320x240</td>
+              </tr>
+              <tr>
+                <td>Audio</td>
+                <td>Estéreo PWM 1W</td>
+              </tr>
+              <tr>
+                <td>Alimentación</td>
+                <td>USB-C 5W+</td>
+              </tr>
+              <tr>
+                <td>Dimensiones</td>
+                <td>PCB: 110x85mm</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS SECTION
+       ============================================ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 id="testimonialsTitle">Lo que dicen nuestros testers</h2>
+        <p id="testimonialsSubtitle">Descubre qué opinan los primeros usuarios del CoCo-1</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-quote" id="testimonial1Quote">
+            He probado otros proyectos retro, pero el CoCo-1 me ha sorprendido. La velocidad del BASIC es increíble y el hecho de tener VGA y USB es genial.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CM</div>
+            <div class="testimonial-info">
+              <h4 id="testimonial1Author">Carlos Martínez</h4>
+              <p id="testimonial1Role">Entusiasta retro</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-quote" id="testimonial2Quote">
+            Perfecto para enseñar programación a mis hijos. La curva de aprendizaje es suave pero permite hacer cosas muy complejas cuando quieres.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MG</div>
+            <div class="testimonial-info">
+              <h4 id="testimonial2Author">María García</h4>
+              <p id="testimonial2Role">Profesora de informática</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-quote" id="testimonial3Quote">
+            Lo uso como consola de desarrollo para mis proyectos de electrónica. Tener un intérprete BASIC rápido y un puerto de expansión no tiene precio.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AR</div>
+            <div class="testimonial-info">
+              <h4 id="testimonial3Author">Antonio Ruiz</h4>
+              <p id="testimonial3Role">Ingeniero electrónico</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PREORDER SECTION
+       ============================================ -->
+  <section class="preorder" id="preorder">
+    <div class="container">
+      <div class="preorder-content fade-in">
+        <h2 id="preorderTitle">¡Reserva ahora!</h2>
+        <p id="preorderSubtitle">Asegura tu CoCo-1 al precio especial de lanzamiento</p>
+        <p id="preorderDescription">
+          El precio de lanzamiento de 39 € está disponible exclusivamente para las primeras reservas. Incluye 2 años de garantía.
+        </p>
+
+        <ul class="preorder-benefits">
+          <li>
+            <span class="icon">✓</span>
+            <span id="benefit1">Precio especial de lanzamiento</span>
+          </li>
+          <li>
+            <span class="icon">✓</span>
+            <span id="benefit2">Garantía de 2 años</span>
+          </li>
+          <li>
+            <span class="icon">✓</span>
+            <span id="benefit3">Acceso prioritario</span>
+          </li>
+          <li>
+            <span class="icon">✓</span>
+            <span id="benefit4">Soporte técnico incluido</span>
+          </li>
+          <li>
+            <span class="icon">✓</span>
+            <span id="benefit5">Manuales en español e inglés</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="preorder-form fade-in" id="preorderFormInner">
+        <h3 id="formTitle">Formulario de reserva</h3>
+        <p class="subtitle" id="formSubtitle">Cumplimenta el formulario con tus datos para procesar la reserva</p>
+
+        <form id="preorderForm">
+          <div class="form-group">
+            <label for="nameInput" id="labelName">Nombre completo</label>
+            <input type="text" id="nameInput" name="name" required placeholder="Tu nombre">
+          </div>
+
+          <div class="form-group">
+            <label for="emailInput" id="labelEmail">Correo electrónico</label>
+            <input type="email" id="emailInput" name="email" required placeholder="tu@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="phoneInput" id="labelPhone">Teléfono (opcional)</label>
+            <input type="tel" id="phoneInput" name="phone" placeholder="+34 600 000 000">
+          </div>
+
+          <div class="form-group">
+            <label for="country" id="labelCountry">País</label>
+            <select id="country" name="country" required>
+              <option value="">Seleccionar...</option>
+              <option value="ES">España</option>
+              <option value="MX">México</option>
+              <option value="AR">Argentina</option>
+              <option value="CO">Colombia</option>
+              <option value="CL">Chile</option>
+              <option value="PE">Perú</option>
+              <option value="US">Estados Unidos</option>
+              <option value="GB">Reino Unido</option>
+              <option value="DE">Alemania</option>
+              <option value="FR">Francia</option>
+              <option value="OTHER">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quantity" id="labelQuantity">Cantidad</label>
+              <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="shipping" id="labelShipping">Envío</label>
+              <select id="shipping" name="shipping">
+                <option value="standard" id="shippingStandard">Estándar (5-7 días) - 5€</option>
+                <option value="express" id="shippingExpress">Exprés (2-3 días) - 15€</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="price-summary">
+            <div class="price-row">
+              <span><span id="priceSubtotalLabel">Subtotal</span> (39€ × <span id="qtyDisplay">1</span>)</span>
+              <span id="subtotalAmount">39€</span>
+            </div>
+            <div class="price-row">
+              <span id="priceShippingLabel">Envío</span>
+              <span id="shippingAmount">5€</span>
+            </div>
+            <div class="price-row total">
+              <span id="priceTotalLabel">Total</span>
+              <span id="totalAmount">44€</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-stripe" id="stripeBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.591-7.305z"/>
+            </svg>
+            <span id="btnPay">Pagar con Stripe</span>
+          </button>
+
+          <div class="secure-badge">
+            <span>🔒</span>
+            <span id="securePayment">Pago 100% seguro con Stripe</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="images/Logo-empresa.png" alt="COSSIO COMPUTER">
+          <p id="footerDescription">Fabricante de microordenadores retro modernos.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+            <a href="#" class="social-link" aria-label="GitHub">⌘</a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4 id="footerProduct">Producto</h4>
+          <ul>
+            <li><a href="#features">CoCo-1</a></li>
+            <li><a href="#">Manual de usuario</a></li>
+            <li><a href="#">Especificaciones</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4 id="footerCompany">Empresa</h4>
+          <ul>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4 id="footerLegal">Legal</h4>
+          <ul>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Devoluciones</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p id="footerCopyright">© 2026 COSSIO COMPUTER. Todos los derechos reservados.</p>
+        <div>
+          <a href="#">Privacidad</a> · <a href="#">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
