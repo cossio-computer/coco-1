@@ -15,15 +15,15 @@ const translations = {
     nav_preorder: 'Reservar',
 
     // Hero
-    hero_badge: '¡Lanzamiento Junio 2026!',
+    hero_badge: '¡Lanzamiento Diciembre 2026!',
     hero_title: 'CoCo-1',
     hero_title_suffix: ' BASIC Microcomputer',
     hero_description: 'El microordenador personal que une la nostalgia de los 80 con la tecnología de hoy. Perfecto para aprender, programar y revivir la magia de la era dorada de la computación.',
     hero_cta_primary: 'Reservar ahora',
     hero_cta_secondary: 'Saber más',
     launch_price: 'Precio lanzamiento',
-    old_price: '49 €',
-    new_price: '39 €',
+    old_price: '',
+    new_price: '49,99€',
 
     // Features
     features_title: 'Características',
@@ -79,7 +79,7 @@ const translations = {
     // Preorder
     preorder_title: '¡Reserva ahora!',
     preorder_subtitle: 'Asegura tu CoCo-1 al precio especial de lanzamiento',
-    preorder_description: 'El precio de lanzamiento de 39 € está disponible exclusivamente para las primeras reservas. Incluye 2 años de garantía.',
+    preorder_description: 'El precio de lanzamiento de 49,99€ está disponible exclusivamente para las primeras reservas. Incluye 2 años de garantía.',
     benefit_1: 'Precio especial de lanzamiento',
     benefit_2: 'Garantía de 2 años',
     benefit_3: 'Acceso prioritario',
@@ -93,13 +93,14 @@ const translations = {
     label_country: 'País',
     label_quantity: 'Cantidad',
     label_shipping: 'Envío',
-    shipping_standard: 'Estándar (5-7 días)',
-    shipping_express: 'Exprés (2-3 días)',
+    shipping_standard: 'Estándar (5-7 días) - 10€',
+    shipping_express: 'Exprés (2-3 días) - 15€',
     price_subtotal: 'Subtotal',
     price_shipping: 'Envío',
     price_total: 'Total',
-    btn_pay: 'Pagar con Stripe',
-    secure_payment: 'Pago 100% seguro con Stripe',
+    btn_pay: 'Pagar con PayPal',
+    btn_bizum: 'Pagar con Bizum',
+    secure_payment: 'Pago con PayPal.Me o Bizum',
     select_option: 'Seleccionar...',
 
     // Footer
@@ -117,6 +118,16 @@ const translations = {
     notification_preorder_error: 'Error de procesamiento. Por favor, inténtelo nuevamente.',
     notification_email_invalid: 'Por favor, indique un correo electrónico válido.',
     notification_name_required: 'Introduzca su nombre, si es tan amable.',
+    notification_payment_link_missing: 'Falta configurar el enlace PayPal.Me.',
+    notification_bizum_phone_missing: 'Falta configurar el teléfono de Bizum.',
+    notification_copied: 'Copiado.',
+    bizum_modal_title: 'Pagar con Bizum',
+    bizum_modal_text: 'Abre tu app bancaria y envía un Bizum con estos datos:',
+    bizum_phone_label: 'Teléfono',
+    bizum_amount_label: 'Importe',
+    bizum_concept_label: 'Concepto',
+    bizum_copy: 'Copiar',
+    bizum_modal_note: 'El pago se confirma manualmente tras recibir el Bizum.',
   },
 
   en: {
@@ -127,15 +138,15 @@ const translations = {
     nav_preorder: 'Pre-order',
 
     // Hero
-    hero_badge: 'Launching June 2026!',
+    hero_badge: 'Launching December 2026!',
     hero_title: 'CoCo-1',
     hero_title_suffix: ' BASIC Microcomputer',
     hero_description: 'The personal microcomputer that combines 80s nostalgia with modern technology. Perfect for learning, programming, and reliving the magic of computing\'s golden age.',
     hero_cta_primary: 'Pre-order Now',
     hero_cta_secondary: 'Learn More',
     launch_price: 'Launch Price',
-    old_price: '49 €',
-    new_price: '39 €',
+    old_price: '',
+    new_price: '49,99€',
 
     // Features
     features_title: 'Features',
@@ -191,7 +202,7 @@ const translations = {
     // Preorder
     preorder_title: 'Pre-order Now!',
     preorder_subtitle: 'Get your CoCo-1 at the special launch price',
-    preorder_description: 'The launch price of 39 € is available exclusively for early reservations. Includes 2-year warranty.',
+    preorder_description: 'The launch price of 49,99€ is available exclusively for early reservations. Includes 2-year warranty.',
     benefit_1: 'Special launch price',
     benefit_2: '2-year warranty',
     benefit_3: 'Priority access',
@@ -205,13 +216,14 @@ const translations = {
     label_country: 'Country',
     label_quantity: 'Quantity',
     label_shipping: 'Shipping',
-    shipping_standard: 'Standard (5-7 days)',
-    shipping_express: 'Express (2-3 days)',
+    shipping_standard: 'Standard (5-7 days) - €10',
+    shipping_express: 'Express (2-3 days) - €15',
     price_subtotal: 'Subtotal',
     price_shipping: 'Shipping',
     price_total: 'Total',
-    btn_pay: 'Pay with Stripe',
-    secure_payment: '100% secure payment with Stripe',
+    btn_pay: 'Pay with PayPal',
+    btn_bizum: 'Pay with Bizum',
+    secure_payment: 'Payment via PayPal.Me or Bizum',
     select_option: 'Select...',
 
     // Footer
@@ -229,6 +241,16 @@ const translations = {
     notification_preorder_error: 'Error processing. Please try again.',
     notification_email_invalid: 'Please enter a valid email.',
     notification_name_required: 'Name is required.',
+    notification_payment_link_missing: 'PayPal.Me link is not configured.',
+    notification_bizum_phone_missing: 'Bizum phone number is not configured.',
+    notification_copied: 'Copied.',
+    bizum_modal_title: 'Pay with Bizum',
+    bizum_modal_text: 'Open your banking app and send a Bizum payment with these details:',
+    bizum_phone_label: 'Phone',
+    bizum_amount_label: 'Amount',
+    bizum_concept_label: 'Reference',
+    bizum_copy: 'Copy',
+    bizum_modal_note: 'Payment is confirmed manually after the Bizum transfer is received.',
   }
 };
 
@@ -244,6 +266,9 @@ let formData = {
   quantity: 1,
   shipping: 'standard'
 };
+const PAYPAL_ME_LINK = 'https://paypal.me/cossiocomputer';
+const BIZUM_PHONE = '655131003';
+const BIZUM_CONCEPT = 'CoCo-1';
 
 // ============================================
 // DOM ELEMENTS
@@ -254,11 +279,15 @@ const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinksContainer = document.querySelector('.nav-links');
 const navbar = document.querySelector('.navbar');
 const fadeElements = document.querySelectorAll('.fade-in');
-const preorderForm = document.getElementById('preorderFormInner');
+const preorderForm = document.getElementById('preorderForm');
 const quantitySelect = document.getElementById('quantity');
 const shippingSelect = document.getElementById('shipping');
 const countrySelect = document.getElementById('country');
-const stripeBtn = document.querySelector('.btn-stripe');
+const paypalBtn = document.querySelector('.btn-paypal');
+const bizumBtn = document.querySelector('.btn-bizum');
+const bizumModal = document.getElementById('bizumModal');
+const bizumModalClose = document.getElementById('bizumModalClose');
+const copyBtns = document.querySelectorAll('.copy-btn');
 
 // ============================================
 // LANGUAGE SWITCHING
@@ -274,6 +303,14 @@ function setLanguage(lang) {
 
   // Update all text elements
   const t = translations[lang];
+
+  // Navigation
+  navLinks.forEach(link => {
+    const key = link.dataset.i18n;
+    if (key && t[key]) {
+      link.textContent = t[key];
+    }
+  });
 
   // Hero
   document.querySelector('.hero-badge').textContent = t.hero_badge;
@@ -351,7 +388,17 @@ function setLanguage(lang) {
   document.getElementById('priceShippingLabel').textContent = t.price_shipping;
   document.getElementById('priceTotalLabel').textContent = t.price_total;
   document.getElementById('btnPay').textContent = t.btn_pay;
+  document.getElementById('btnBizum').textContent = t.btn_bizum;
   document.getElementById('securePayment').textContent = t.secure_payment;
+  document.getElementById('bizumModalTitle').textContent = t.bizum_modal_title;
+  document.getElementById('bizumModalText').textContent = t.bizum_modal_text;
+  document.getElementById('bizumPhoneLabel').textContent = t.bizum_phone_label;
+  document.getElementById('bizumAmountLabel').textContent = t.bizum_amount_label;
+  document.getElementById('bizumConceptLabel').textContent = t.bizum_concept_label;
+  document.getElementById('bizumModalNote').textContent = t.bizum_modal_note;
+  copyBtns.forEach(btn => {
+    btn.textContent = t.bizum_copy;
+  });
 
   // Footer
   document.getElementById('footerDescription').textContent = t.footer_description;
@@ -407,43 +454,56 @@ function updateCountryOptions() {
 // ============================================
 // PRICE CALCULATION
 // ============================================
-const UNIT_PRICE = 39;
-const SHIPPING_STANDARD = 5;
+const UNIT_PRICE = 49.99;
+const SHIPPING_STANDARD = 10;
 const SHIPPING_EXPRESS = 15;
+
+function formatPrice(amount) {
+  return `${amount.toLocaleString('es-ES', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })}€`;
+}
+
+function getCurrentTotal() {
+  const quantity = parseInt(quantitySelect?.value || 1);
+  const shipping = shippingSelect?.value || 'standard';
+  const shippingCost = shipping === 'express' ? SHIPPING_EXPRESS : SHIPPING_STANDARD;
+
+  return UNIT_PRICE * quantity + shippingCost;
+}
 
 function updatePrices() {
   const quantity = parseInt(quantitySelect?.value || 1);
   const shipping = shippingSelect?.value || 'standard';
   const shippingCost = shipping === 'express' ? SHIPPING_EXPRESS : SHIPPING_STANDARD;
   const subtotal = UNIT_PRICE * quantity;
-  const total = subtotal + shippingCost;
+  const total = getCurrentTotal();
 
-  const t = translations[currentLang];
-  const currency = '€';
-
-  document.getElementById('subtotalAmount').textContent = `${currency}${subtotal}`;
-  document.getElementById('shippingAmount').textContent = shipping === 'express' ? `${currency}${SHIPPING_EXPRESS}` : `${currency}${SHIPPING_STANDARD}`;
-  document.getElementById('totalAmount').textContent = `${currency}${total}`;
+  document.getElementById('qtyDisplay').textContent = quantity;
+  document.getElementById('unitPriceDisplay').textContent = formatPrice(UNIT_PRICE);
+  document.getElementById('subtotalAmount').textContent = formatPrice(subtotal);
+  document.getElementById('shippingAmount').textContent = formatPrice(shippingCost);
+  document.getElementById('totalAmount').textContent = formatPrice(total);
+  document.getElementById('bizumAmountValue').textContent = formatPrice(total);
 }
 
 // ============================================
-// STRIPE INTEGRATION
+// PAYPAL.ME PAYMENT LINK
 // ============================================
-function initStripe() {
-  // Note: In production, you would use your actual Stripe publishable key
-  // and create a payment intent on your server
-  const stripePublishableKey = 'pk_test_YOUR_STRIPE_KEY';
-
-  if (typeof Stripe !== 'undefined') {
-    window.stripe = Stripe(stripePublishableKey);
-  }
-
-  stripeBtn?.addEventListener('click', handlePayment);
+function initPayPalPayment() {
+  preorderForm?.addEventListener('submit', handlePayment);
+  bizumBtn?.addEventListener('click', handleBizumPayment);
+  bizumModalClose?.addEventListener('click', closeBizumModal);
+  bizumModal?.addEventListener('click', (e) => {
+    if (e.target === bizumModal) closeBizumModal();
+  });
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', () => copyTextFromTarget(btn.dataset.copyTarget));
+  });
 }
 
-async function handlePayment(e) {
-  e.preventDefault();
-
+function validatePaymentForm() {
   const t = translations[currentLang];
   const name = document.getElementById('nameInput')?.value;
   const email = document.getElementById('emailInput')?.value;
@@ -451,78 +511,74 @@ async function handlePayment(e) {
   // Validation
   if (!name || name.trim().length < 2) {
     showNotification(t.notification_name_required, 'error');
-    return;
+    return null;
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email || !emailRegex.test(email)) {
     showNotification(t.notification_email_invalid, 'error');
+    return null;
+  }
+
+  return { name: name.trim(), email };
+}
+
+async function handlePayment(e) {
+  e.preventDefault();
+
+  const t = translations[currentLang];
+  const paymentData = validatePaymentForm();
+
+  if (!paymentData) return;
+
+  if (!PAYPAL_ME_LINK) {
+    showNotification(t.notification_payment_link_missing, 'error');
     return;
   }
 
-  // Show loading state
-  stripeBtn.classList.add('loading');
-  stripeBtn.disabled = true;
+  paypalBtn.classList.add('loading');
+  paypalBtn.disabled = true;
+  window.location.href = `${PAYPAL_ME_LINK}/${getCurrentTotal().toFixed(2)}`;
+}
 
-  // Simulate payment processing
-  // In production, you would:
-  // 1. Create a payment intent on your server
-  // 2. Use Stripe.js to confirm the payment
-  // 3. Handle the result
+function openBizumModal() {
+  document.getElementById('bizumPhoneValue').textContent = BIZUM_PHONE;
+  document.getElementById('bizumAmountValue').textContent = formatPrice(getCurrentTotal());
+  document.getElementById('bizumConceptValue').textContent = BIZUM_CONCEPT;
+  bizumModal?.classList.add('active');
+  bizumModal?.setAttribute('aria-hidden', 'false');
+}
 
-  setTimeout(() => {
-    showNotification(t.notification_preorder_success, 'success');
-    stripeBtn.classList.remove('loading');
-    stripeBtn.disabled = false;
+function closeBizumModal() {
+  bizumModal?.classList.remove('active');
+  bizumModal?.setAttribute('aria-hidden', 'true');
+}
 
-    // Reset form
-    if (preorderForm) {
-      preorderForm.reset();
-    }
-    updatePrices();
-  }, 2000);
+async function copyTextFromTarget(targetId) {
+  const value = document.getElementById(targetId)?.textContent || '';
 
-  /*
-  // Production code:
+  if (!value || !navigator.clipboard) return;
+
   try {
-    const response = await fetch('/api/create-payment-intent', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        amount: total * 100, // Stripe uses cents
-        currency: 'eur',
-        email: email,
-        name: name
-      })
-    });
-
-    const { clientSecret, error } = await response.json();
-
-    if (error) {
-      showNotification(error, 'error');
-      return;
-    }
-
-    const result = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: cardElement,
-        billing_details: {
-          name: name,
-          email: email
-        }
-      }
-    });
-
-    if (result.error) {
-      showNotification(result.error.message, 'error');
-    } else {
-      showNotification(t.notification_preorder_success, 'success');
-      preorderForm.reset();
-    }
+    await navigator.clipboard.writeText(value);
+    showNotification(translations[currentLang].notification_copied, 'success');
   } catch (err) {
-    showNotification(t.notification_preorder_error, 'error');
+    showNotification(value, 'info');
   }
-  */
+}
+
+function handleBizumPayment() {
+  const t = translations[currentLang];
+  const paymentData = validatePaymentForm();
+
+  if (!paymentData) return;
+
+  if (!BIZUM_PHONE) {
+    showNotification(t.notification_bizum_phone_missing, 'error');
+    return;
+  }
+
+  openBizumModal();
 }
 
 // ============================================
@@ -538,10 +594,14 @@ function showNotification(message, type = 'info') {
   // Create notification
   const notification = document.createElement('div');
   notification.className = `notification ${type}`;
-  notification.innerHTML = `
-    <span>${type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ'}</span>
-    <span>${message}</span>
-  `;
+  const icon = document.createElement('span');
+  icon.textContent = type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ';
+
+  const text = document.createElement('span');
+  text.textContent = message;
+
+  notification.appendChild(icon);
+  notification.appendChild(text);
 
   document.body.appendChild(notification);
 
@@ -652,8 +712,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set initial language
   setLanguage(currentLang);
 
-  // Initialize Stripe
-  initStripe();
+  // Initialize PayPal.Me payment link
+  initPayPalPayment();
 
   // Initialize scroll animations
   handleScrollAnimations();

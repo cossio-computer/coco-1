@@ -63,7 +63,7 @@
       <div class="hero-content fade-in">
         <div class="hero-badge">
           <span>🚀</span>
-          <span id="heroBadge">¡Lanzamiento Junio 2026!</span>
+          <span id="heroBadge">¡Lanzamiento Diciembre 2026!</span>
         </div>
 
         <h1>
@@ -89,8 +89,8 @@
         <img src="images/CoCo-1-placa.png" alt="CoCo-1 Microcomputer">
         <div class="price-badge">
           <div class="launch-price" id="launchPriceLabel">Precio Lanzamiento</div>
-          <div class="old-price" id="oldPrice">49€</div>
-          <div class="new-price" id="newPrice">39€</div>
+          <div class="old-price" id="oldPrice"></div>
+          <div class="new-price" id="newPrice">49,99€</div>
         </div>
       </div>
     </div>
@@ -305,7 +305,7 @@
         <h2 id="preorderTitle">¡Reserva ahora!</h2>
         <p id="preorderSubtitle">Asegura tu CoCo-1 al precio especial de lanzamiento</p>
         <p id="preorderDescription">
-          El precio de lanzamiento de 39 € está disponible exclusivamente para las primeras reservas. Incluye 2 años de garantía.
+          El precio de lanzamiento de 49,99€ está disponible exclusivamente para las primeras reservas. Incluye 2 años de garantía.
         </p>
 
         <ul class="preorder-benefits">
@@ -384,7 +384,7 @@
             <div class="form-group">
               <label for="shipping" id="labelShipping">Envío</label>
               <select id="shipping" name="shipping">
-                <option value="standard" id="shippingStandard">Estándar (5-7 días) - 5€</option>
+                <option value="standard" id="shippingStandard">Estándar (5-7 días) - 10€</option>
                 <option value="express" id="shippingExpress">Exprés (2-3 días) - 15€</option>
               </select>
             </div>
@@ -392,34 +392,67 @@
 
           <div class="price-summary">
             <div class="price-row">
-              <span><span id="priceSubtotalLabel">Subtotal</span> (39€ × <span id="qtyDisplay">1</span>)</span>
-              <span id="subtotalAmount">39€</span>
+              <span><span id="priceSubtotalLabel">Subtotal</span> (<span id="unitPriceDisplay">49,99€</span> × <span id="qtyDisplay">1</span>)</span>
+              <span id="subtotalAmount">49,99€</span>
             </div>
             <div class="price-row">
               <span id="priceShippingLabel">Envío</span>
-              <span id="shippingAmount">5€</span>
+              <span id="shippingAmount">10,00€</span>
             </div>
             <div class="price-row total">
               <span id="priceTotalLabel">Total</span>
-              <span id="totalAmount">44€</span>
+              <span id="totalAmount">59,99€</span>
             </div>
           </div>
 
-          <button type="submit" class="btn-stripe" id="stripeBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.591-7.305z"/>
-            </svg>
-            <span id="btnPay">Pagar con Stripe</span>
-          </button>
+          <div class="payment-buttons">
+            <button type="submit" class="btn-paypal" id="paypalBtn">
+              <span aria-hidden="true">P</span>
+              <span id="btnPay">Pagar con PayPal</span>
+            </button>
+
+            <button type="button" class="btn-bizum" id="bizumBtn">
+              <span aria-hidden="true">B</span>
+              <span id="btnBizum">Pagar con Bizum</span>
+            </button>
+          </div>
 
           <div class="secure-badge">
             <span>🔒</span>
-            <span id="securePayment">Pago 100% seguro con Stripe</span>
+            <span id="securePayment">Pago con PayPal.Me o Bizum</span>
           </div>
         </form>
       </div>
     </div>
   </section>
+
+  <div class="payment-modal" id="bizumModal" aria-hidden="true">
+    <div class="payment-modal-content" role="dialog" aria-modal="true" aria-labelledby="bizumModalTitle">
+      <button type="button" class="payment-modal-close" id="bizumModalClose" aria-label="Cerrar">×</button>
+      <h3 id="bizumModalTitle">Pagar con Bizum</h3>
+      <p id="bizumModalText">Abre tu app bancaria y envía un Bizum con estos datos:</p>
+
+      <div class="bizum-details">
+        <div class="bizum-detail">
+          <span id="bizumPhoneLabel">Teléfono</span>
+          <strong id="bizumPhoneValue">655131003</strong>
+          <button type="button" class="copy-btn" data-copy-target="bizumPhoneValue" id="copyBizumPhone">Copiar</button>
+        </div>
+        <div class="bizum-detail">
+          <span id="bizumAmountLabel">Importe</span>
+          <strong id="bizumAmountValue">59,99€</strong>
+          <button type="button" class="copy-btn" data-copy-target="bizumAmountValue" id="copyBizumAmount">Copiar</button>
+        </div>
+        <div class="bizum-detail">
+          <span id="bizumConceptLabel">Concepto</span>
+          <strong id="bizumConceptValue">CoCo-1</strong>
+          <button type="button" class="copy-btn" data-copy-target="bizumConceptValue" id="copyBizumConcept">Copiar</button>
+        </div>
+      </div>
+
+      <p class="payment-modal-note" id="bizumModalNote">El pago se confirma manualmente tras recibir el Bizum.</p>
+    </div>
+  </div>
 
   <!-- ============================================
        FOOTER

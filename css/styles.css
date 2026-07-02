@@ -735,10 +735,15 @@ p { max-width: 65ch; }
   font-size: 1.25rem;
 }
 
-.btn-stripe {
+.payment-buttons {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.btn-paypal,
+.btn-bizum {
   width: 100%;
   padding: 1rem;
-  background: #635BFF;
   color: white;
   border: none;
   border-radius: var(--radius-sm);
@@ -752,8 +757,21 @@ p { max-width: 65ch; }
   gap: 0.5rem;
 }
 
-.btn-stripe:hover {
-  background: #5046E5;
+.btn-paypal {
+  background: #0070ba;
+}
+
+.btn-paypal:hover {
+  background: #005ea6;
+  transform: translateY(-2px);
+}
+
+.btn-bizum {
+  background: #05c0a5;
+}
+
+.btn-bizum:hover {
+  background: #049b86;
   transform: translateY(-2px);
 }
 
@@ -765,6 +783,98 @@ p { max-width: 65ch; }
   margin-top: 1rem;
   font-size: 0.875rem;
   color: var(--text-muted);
+}
+
+.payment-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 27, 58, 0.65);
+  z-index: 3000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.payment-modal.active {
+  display: flex;
+}
+
+.payment-modal-content {
+  position: relative;
+  width: min(100%, 460px);
+  background: white;
+  color: var(--text-dark);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 20px 60px var(--shadow-strong);
+}
+
+.payment-modal-content h3 {
+  margin-bottom: 0.75rem;
+  color: var(--midnight);
+}
+
+.payment-modal-content p {
+  color: var(--text-muted);
+}
+
+.payment-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: var(--lavender);
+  color: var(--midnight);
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.bizum-details {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.bizum-detail {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  padding: 1rem;
+  background: var(--lavender-light);
+  border-radius: var(--radius-sm);
+}
+
+.bizum-detail span {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.bizum-detail strong {
+  grid-column: 1;
+  color: var(--midnight);
+  font-size: 1.125rem;
+}
+
+.copy-btn {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.payment-modal-note {
+  font-size: 0.875rem;
 }
 
 /* ============================================
@@ -1057,13 +1167,15 @@ p { max-width: 65ch; }
 .testimonials-grid .testimonial-card:nth-child(2) { transition-delay: 0.2s; }
 .testimonials-grid .testimonial-card:nth-child(3) { transition-delay: 0.3s; }
 
-/* Loading state for Stripe button */
-.btn-stripe.loading {
+/* Loading state for PayPal button */
+.btn-paypal.loading,
+.btn-bizum.loading {
   pointer-events: none;
   opacity: 0.7;
 }
 
-.btn-stripe.loading::after {
+.btn-paypal.loading::after,
+.btn-bizum.loading::after {
   content: '';
   width: 20px;
   height: 20px;
