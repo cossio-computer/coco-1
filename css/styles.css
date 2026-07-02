@@ -569,17 +569,20 @@ p { max-width: 65ch; }
   color: var(--text-dark);
   margin-bottom: 1.5rem;
   position: relative;
-  padding-left: 1.5rem;
 }
 
 .testimonial-quote::before {
   content: '"';
-  position: absolute;
-  left: 0;
-  top: -10px;
-  font-size: 3rem;
-  color: var(--lavender-dark);
-  font-family: Georgia, serif;
+  font-size: calc(1.125rem + 2pt);
+  color: var(--text-dark);
+  font-family: inherit;
+}
+
+.testimonial-quote::after {
+  content: '"';
+  font-size: calc(1.125rem + 2pt);
+  color: var(--text-dark);
+  font-family: inherit;
 }
 
 .testimonial-author {
@@ -712,6 +715,10 @@ p { max-width: 65ch; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+}
+
+.preorder-options-row {
+  grid-template-columns: 1fr 2fr 3fr;
 }
 
 .price-summary {

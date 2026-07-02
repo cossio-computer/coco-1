@@ -110,19 +110,19 @@
         <div class="feature-card fade-in">
           <div class="feature-icon">🖥️</div>
           <h3 id="feature1Title">Salida VGA</h3>
-          <p id="feature1Desc">640x480 monocromo o 320x240 color con 16 colores. Generada por la segunda CPU sin afectar al BASIC.</p>
+          <p id="feature1Desc">Resolución 640x480 monocromo o 320x240 con soporte de hasta 16 colores.</p>
         </div>
 
         <div class="feature-card fade-in">
           <div class="feature-icon">⌨️</div>
           <h3 id="feature2Title">Teclado USB</h3>
-          <p id="feature2Desc">Compatible con cualquier teclado PC estándar. Configurable para ES, US, UK, DE, FR.</p>
+          <p id="feature2Desc">Compatible con cualquier teclado PC estándar. Configurable para ES, US, UK, DE, FR. Mayúsculas y minúsculas acentuadas y caracteres especiales como la ñ en el teclado español.</p>
         </div>
 
         <div class="feature-card fade-in">
           <div class="feature-icon">💻</div>
           <h3 id="feature3Title">BASIC avanzado</h3>
-          <p id="feature3Desc">Intérprete MMBasic con aritmética 64 bits, matrices multidimensionales, funciones de usuario y más.</p>
+          <p id="feature3Desc">Intérprete MMBASIC compatible con Microsoft BASIC, con soporte para gráficos y sonido. Editor incorporado para la edición de programas con sintaxis coloreada.</p>
         </div>
 
         <div class="feature-card fade-in">
@@ -134,13 +134,13 @@
         <div class="feature-card fade-in">
           <div class="feature-icon">🎮</div>
           <h3 id="feature5Title">Gráficos y sonido</h3>
-          <p id="feature5Desc">Gráficos 16 colores, 8 fuentes, sonido estéreo PWM 1W. Juegos y visualizaciones.</p>
+          <p id="feature5Desc">Gráficos 16 colores, sonido estéreo, 8 tipos de letra, sprites ... Incluye 5 juegos: Tetris, Asteroids, Space Invaders, PacMan y Flappy Bird.</p>
         </div>
 
         <div class="feature-card fade-in">
           <div class="feature-icon">🔌</div>
-          <h3 id="feature6Title">Puerto de expansión</h3>
-          <p id="feature6Desc">11 pines configurables como E/S digital o analógica. RTC, RS232, USB-C.</p>
+          <h3 id="feature6Title">Interfaces</h3>
+          <p id="feature6Desc">2 puertos serie RS-232, VGA, USB para teclado, conector de expansión con 11 pines de Entrada/Salida digitales o analógicas, Interruptor y alimentación por USB-C.</p>
         </div>
       </div>
     </div>
@@ -194,7 +194,7 @@
             </li>
             <li>
               <span class="check"></span>
-              <span id="checkRtc">Reloj en tiempo real</span>
+              <span id="checkRtc">Reloj en tiempo real (RTC) con pila</span>
             </li>
             <li>
               <span class="check"></span>
@@ -327,7 +327,7 @@
           </li>
           <li>
             <span class="icon">✓</span>
-            <span id="benefit5">Manuales en español e inglés</span>
+            <span id="benefit5">Manual en español</span>
           </li>
         </ul>
       </div>
@@ -370,14 +370,23 @@
             </select>
           </div>
 
-          <div class="form-row">
-            <div class="form-group">
+          <div class="form-row preorder-options-row">
+            <div class="form-group quantity-group">
               <label for="quantity" id="labelQuantity">Cantidad</label>
               <select id="quantity" name="quantity">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
+                <option value="4">4</option>
                 <option value="5">5</option>
+              </select>
+            </div>
+
+            <div class="form-group case-group">
+              <label for="caseOption" id="labelCase">Carcasa</label>
+              <select id="caseOption" name="caseOption">
+                <option value="no" id="caseNo">Sólo PCB</option>
+                <option value="yes" id="caseYes">PCB+Carcasa</option>
               </select>
             </div>
 
