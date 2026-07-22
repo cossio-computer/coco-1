@@ -90,6 +90,11 @@ const translations = {
     label_name: 'Nombre completo',
     label_email: 'Correo electrónico',
     label_phone: 'Teléfono (opcional)',
+    label_address: 'Dirección',
+    label_province: 'Provincia',
+    label_postal_code: 'Código postal',
+    placeholder_address: 'Calle, número, piso',
+    placeholder_postal_code: '00000',
     label_country: 'País',
     label_quantity: 'Cantidad',
     label_case: 'Carcasa',
@@ -121,6 +126,8 @@ const translations = {
     notification_preorder_error: 'Error de procesamiento. Por favor, inténtelo nuevamente.',
     notification_email_invalid: 'Por favor, indique un correo electrónico válido.',
     notification_name_required: 'Introduzca su nombre, si es tan amable.',
+    notification_province_required: 'Seleccione una provincia.',
+    notification_postal_code_invalid: 'El código postal no corresponde a la provincia seleccionada.',
     notification_payment_link_missing: 'Falta configurar el enlace PayPal.Me.',
     notification_bizum_phone_missing: 'Falta configurar el teléfono de Bizum.',
     notification_copied: 'Copiado.',
@@ -216,6 +223,11 @@ const translations = {
     label_name: 'Full name',
     label_email: 'Email address',
     label_phone: 'Phone (optional)',
+    label_address: 'Address',
+    label_province: 'Province',
+    label_postal_code: 'Postal code',
+    placeholder_address: 'Street, number, apartment',
+    placeholder_postal_code: 'Postal code',
     label_country: 'Country',
     label_quantity: 'Quantity',
     label_case: 'Case',
@@ -247,6 +259,8 @@ const translations = {
     notification_preorder_error: 'Error processing. Please try again.',
     notification_email_invalid: 'Please enter a valid email.',
     notification_name_required: 'Name is required.',
+    notification_province_required: 'Please select a province.',
+    notification_postal_code_invalid: 'The postal code does not match the selected province.',
     notification_payment_link_missing: 'PayPal.Me link is not configured.',
     notification_bizum_phone_missing: 'Bizum phone number is not configured.',
     notification_copied: 'Copied.',
@@ -268,6 +282,9 @@ let formData = {
   name: '',
   email: '',
   phone: '',
+  address: '',
+  province: '',
+  postalCode: '',
   country: 'ES',
   quantity: 1,
   caseOption: 'no',
@@ -276,6 +293,60 @@ let formData = {
 const PAYPAL_ME_LINK = 'https://paypal.me/cossiocomputer';
 const BIZUM_PHONE = '655131003';
 const BIZUM_CONCEPT = 'CoCo-1';
+const SPANISH_PROVINCES = [
+  { code: '01', name: 'Álava' },
+  { code: '02', name: 'Albacete' },
+  { code: '03', name: 'Alicante' },
+  { code: '04', name: 'Almería' },
+  { code: '05', name: 'Ávila' },
+  { code: '06', name: 'Badajoz' },
+  { code: '07', name: 'Illes Balears' },
+  { code: '08', name: 'Barcelona' },
+  { code: '09', name: 'Burgos' },
+  { code: '10', name: 'Cáceres' },
+  { code: '11', name: 'Cádiz' },
+  { code: '12', name: 'Castellón' },
+  { code: '13', name: 'Ciudad Real' },
+  { code: '14', name: 'Córdoba' },
+  { code: '15', name: 'A Coruña' },
+  { code: '16', name: 'Cuenca' },
+  { code: '17', name: 'Girona' },
+  { code: '18', name: 'Granada' },
+  { code: '19', name: 'Guadalajara' },
+  { code: '20', name: 'Gipuzkoa' },
+  { code: '21', name: 'Huelva' },
+  { code: '22', name: 'Huesca' },
+  { code: '23', name: 'Jaén' },
+  { code: '24', name: 'León' },
+  { code: '25', name: 'Lleida' },
+  { code: '26', name: 'La Rioja' },
+  { code: '27', name: 'Lugo' },
+  { code: '28', name: 'Madrid' },
+  { code: '29', name: 'Málaga' },
+  { code: '30', name: 'Murcia' },
+  { code: '31', name: 'Navarra' },
+  { code: '32', name: 'Ourense' },
+  { code: '33', name: 'Asturias' },
+  { code: '34', name: 'Palencia' },
+  { code: '35', name: 'Las Palmas' },
+  { code: '36', name: 'Pontevedra' },
+  { code: '37', name: 'Salamanca' },
+  { code: '38', name: 'Santa Cruz de Tenerife' },
+  { code: '39', name: 'Cantabria' },
+  { code: '40', name: 'Segovia' },
+  { code: '41', name: 'Sevilla' },
+  { code: '42', name: 'Soria' },
+  { code: '43', name: 'Tarragona' },
+  { code: '44', name: 'Teruel' },
+  { code: '45', name: 'Toledo' },
+  { code: '46', name: 'Valencia' },
+  { code: '47', name: 'Valladolid' },
+  { code: '48', name: 'Bizkaia' },
+  { code: '49', name: 'Zamora' },
+  { code: '50', name: 'Zaragoza' },
+  { code: '51', name: 'Ceuta' },
+  { code: '52', name: 'Melilla' }
+];
 
 // ============================================
 // DOM ELEMENTS
@@ -291,6 +362,7 @@ const quantitySelect = document.getElementById('quantity');
 const caseSelect = document.getElementById('caseOption');
 const shippingSelect = document.getElementById('shipping');
 const countrySelect = document.getElementById('country');
+const provinceSelect = document.getElementById('provinceInput');
 const paypalBtn = document.querySelector('.btn-paypal');
 const bizumBtn = document.querySelector('.btn-bizum');
 const bizumModal = document.getElementById('bizumModal');
@@ -387,6 +459,11 @@ function setLanguage(lang) {
   document.getElementById('labelName').textContent = t.label_name;
   document.getElementById('labelEmail').textContent = t.label_email;
   document.getElementById('labelPhone').textContent = t.label_phone;
+  document.getElementById('labelAddress').textContent = t.label_address;
+  document.getElementById('labelProvince').textContent = t.label_province;
+  document.getElementById('labelPostalCode').textContent = t.label_postal_code;
+  document.getElementById('addressInput').placeholder = t.placeholder_address;
+  document.getElementById('postalCodeInput').placeholder = t.placeholder_postal_code;
   document.getElementById('labelCountry').textContent = t.label_country;
   document.getElementById('labelQuantity').textContent = t.label_quantity;
   document.getElementById('labelCase').textContent = t.label_case;
@@ -420,6 +497,7 @@ function setLanguage(lang) {
 
   // Update country select options
   updateCountryOptions();
+  updateProvinceOptions();
 
   // Update prices display
   updatePrices();
@@ -457,9 +535,18 @@ function updateCountryOptions() {
   ];
 
   const select = document.getElementById('country');
-  const currentValue = select.value;
+  const currentValue = select.value || formData.country || 'ES';
   select.innerHTML = `<option value="">${translations[currentLang].select_option}</option>` +
     countries.map(c => `<option value="${c.code}" ${c.code === currentValue ? 'selected' : ''}>${c.name}</option>`).join('');
+  formData.country = select.value;
+}
+
+function updateProvinceOptions() {
+  const currentValue = provinceSelect.value;
+  provinceSelect.innerHTML = `<option value="">${translations[currentLang].select_option}</option>` +
+    SPANISH_PROVINCES.map(province => (
+      `<option value="${province.code}" ${province.code === currentValue ? 'selected' : ''}>${province.name}</option>`
+    )).join('');
 }
 
 // ============================================
@@ -521,6 +608,13 @@ function validatePaymentForm() {
   const t = translations[currentLang];
   const name = document.getElementById('nameInput')?.value;
   const email = document.getElementById('emailInput')?.value;
+  const country = countrySelect?.value;
+  const provinceCode = provinceSelect?.value;
+  const postalCode = document.getElementById('postalCodeInput')?.value.trim();
+
+  if (preorderForm && !preorderForm.reportValidity()) {
+    return null;
+  }
 
   // Validation
   if (!name || name.trim().length < 2) {
@@ -532,6 +626,20 @@ function validatePaymentForm() {
   if (!email || !emailRegex.test(email)) {
     showNotification(t.notification_email_invalid, 'error');
     return null;
+  }
+
+  if (country === 'ES') {
+    const province = SPANISH_PROVINCES.find(item => item.code === provinceCode);
+
+    if (!province) {
+      showNotification(t.notification_province_required, 'error');
+      return null;
+    }
+
+    if (!/^\d{5}$/.test(postalCode) || postalCode.slice(0, 2) !== province.code) {
+      showNotification(t.notification_postal_code_invalid, 'error');
+      return null;
+    }
   }
 
   return { name: name.trim(), email };
@@ -550,9 +658,7 @@ async function handlePayment(e) {
     return;
   }
 
-  paypalBtn.classList.add('loading');
-  paypalBtn.disabled = true;
-  window.location.href = `${PAYPAL_ME_LINK}/${getCurrentTotal().toFixed(2)}`;
+  window.open(`${PAYPAL_ME_LINK}/${getCurrentTotal().toFixed(2)}`, '_blank', 'noopener');
 }
 
 function openBizumModal() {
