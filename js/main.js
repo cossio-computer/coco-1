@@ -12,16 +12,16 @@ const translations = {
     nav_features: 'Características',
     nav_showcase: 'Producto',
     nav_testimonials: 'Testimonios',
-    nav_preorder: 'Reservar',
+    nav_preorder: 'Comprar',
 
     // Hero
-    hero_badge: '¡Lanzamiento Diciembre 2026!',
+    hero_badge: '¡El primer micro-ordenador programable por la IA!',
     hero_title: 'CoCo-1',
     hero_title_suffix: ' BASIC Microcomputer',
-    hero_description: 'El microordenador personal que une la nostalgia de los 80 con la tecnología de hoy. Perfecto para aprender, programar y revivir la magia de la era dorada de la computación.',
-    hero_cta_primary: 'Reservar ahora',
+    hero_description: 'El primer micro-ordenador personal programable completamente desde tu agente de IA de una forma interactiva, rápida y sin necesidad de conocimientos previos de programación en BASIC.',
+    hero_cta_primary: 'Comprar ahora',
     hero_cta_secondary: 'Saber más',
-    launch_price: 'Precio lanzamiento',
+    launch_price: 'Desde',
     old_price: '',
     new_price: '49,99€',
 
@@ -42,8 +42,8 @@ const translations = {
     feature_6_desc: '2 puertos serie RS-232, VGA, USB para teclado, conector de expansión con 11 pines de Entrada/Salida digitales o analógicas, Interruptor y alimentación por USB-C.',
 
     // Showcase
-    showcase_title: 'Diseñado para ti',
-    showcase_subtitle: 'Explora las posibilidades del CoCo-1',
+    showcase_title: 'Diseñado para la IA',
+    showcase_subtitle: 'Explora las posibilidades de la IA con CoCo-1',
     showcase_features: 'Características principales',
     check_vga: 'Salida VGA estándar',
     check_keyboard: 'Teclado USB universal',
@@ -77,16 +77,16 @@ const translations = {
     testimonial_3_role: 'Ingeniero electrónico',
 
     // Preorder
-    preorder_title: '¡Reserva ahora!',
+    preorder_title: '¡Compra ahora!',
     preorder_subtitle: 'Asegura tu CoCo-1 al precio especial de lanzamiento',
-    preorder_description: 'El precio de lanzamiento de 49,99€ está disponible exclusivamente para las primeras reservas. Incluye 2 años de garantía.',
+    preorder_description: 'El precio de lanzamiento de 49,99€ está disponible exclusivamente para las primeras compras. Incluye 2 años de garantía.',
     benefit_1: 'Precio especial de lanzamiento',
     benefit_2: 'Garantía de 2 años',
     benefit_3: 'Acceso prioritario',
     benefit_4: 'Soporte técnico incluido',
     benefit_5: 'Manual en español',
-    form_title: 'Formulario de reserva',
-    form_subtitle: 'Cumplimenta el formulario con tus datos para procesar la reserva',
+    form_title: 'Formulario de compra',
+    form_subtitle: 'Cumplimenta el formulario con tus datos para procesar la compra',
     label_name: 'Nombre completo',
     label_email: 'Correo electrónico',
     label_phone: 'Teléfono (opcional)',
@@ -113,16 +113,12 @@ const translations = {
 
     // Footer
     footer_description: 'Fabricante de microordenadores retro modernos.',
-    footer_product: 'Producto',
-    footer_links_product: ['CoCo-1', 'Manual de usuario', 'Especificaciones'],
-    footer_company: 'Empresa',
-    footer_links_company: ['Sobre nosotros', 'Contacto', 'Blog'],
-    footer_legal: 'Legal',
-    footer_links_legal: ['Privacidad', 'Términos', 'Devoluciones'],
+    footer_product: 'Manual de usuario',
+    footer_company: 'Contacto',
     footer_copyright: 'Copyright © 2026 COSSIO COMPUTER. Todos los derechos reservados.',
 
     // Notifications
-    notification_preorder_success: '¡Producto reservado! Recibirá noticias nuestras muy pronto.',
+    notification_preorder_success: '¡Compra recibida! Recibirá noticias nuestras muy pronto.',
     notification_preorder_error: 'Error de procesamiento. Por favor, inténtelo nuevamente.',
     notification_email_invalid: 'Por favor, indique un correo electrónico válido.',
     notification_name_required: 'Introduzca su nombre, si es tan amable.',
@@ -137,6 +133,7 @@ const translations = {
     bizum_amount_label: 'Importe',
     bizum_concept_label: 'Concepto',
     bizum_copy: 'Copiar',
+    bizum_payment_done: 'Pago realizado',
     bizum_modal_note: 'El pago se confirma manualmente tras recibir el Bizum.',
   },
 
@@ -145,16 +142,16 @@ const translations = {
     nav_features: 'Features',
     nav_showcase: 'Product',
     nav_testimonials: 'Testimonials',
-    nav_preorder: 'Pre-order',
+    nav_preorder: 'Buy',
 
     // Hero
-    hero_badge: 'Launching December 2026!',
+    hero_badge: 'The first AI-programmable microcomputer!',
     hero_title: 'CoCo-1',
     hero_title_suffix: ' BASIC Microcomputer',
-    hero_description: 'The personal microcomputer that combines 80s nostalgia with modern technology. Perfect for learning, programming, and reliving the magic of computing\'s golden age.',
-    hero_cta_primary: 'Pre-order Now',
+    hero_description: 'The first personal microcomputer fully programmable from your AI agent in an interactive, fast way, with no prior BASIC programming knowledge required.',
+    hero_cta_primary: 'Buy Now',
     hero_cta_secondary: 'Learn More',
-    launch_price: 'Launch Price',
+    launch_price: 'From',
     old_price: '',
     new_price: '49,99€',
 
@@ -175,8 +172,8 @@ const translations = {
     feature_6_desc: '2 RS-232 serial ports, VGA, USB for keyboard, expansion connector with 11 digital or analog input/output pins, switch, and USB-C power.',
 
     // Showcase
-    showcase_title: 'Designed for You',
-    showcase_subtitle: 'Explore the CoCo-1 possibilities',
+    showcase_title: 'Designed for AI',
+    showcase_subtitle: 'Explore the possibilities of AI with CoCo-1',
     showcase_features: 'Main Features',
     check_vga: 'Standard VGA output',
     check_keyboard: 'Universal USB keyboard',
@@ -210,16 +207,16 @@ const translations = {
     testimonial_3_role: 'Electronics engineer',
 
     // Preorder
-    preorder_title: 'Pre-order Now!',
+    preorder_title: 'Buy Now!',
     preorder_subtitle: 'Get your CoCo-1 at the special launch price',
-    preorder_description: 'The launch price of 49,99€ is available exclusively for early reservations. Includes 2-year warranty.',
+    preorder_description: 'The launch price of 49,99€ is available exclusively for early purchases. Includes 2-year warranty.',
     benefit_1: 'Special launch price',
     benefit_2: '2-year warranty',
     benefit_3: 'Priority access',
     benefit_4: 'Technical support included',
     benefit_5: 'Manual in Spanish',
-    form_title: 'Pre-order Form',
-    form_subtitle: 'Complete your details to process your reservation',
+    form_title: 'Purchase Form',
+    form_subtitle: 'Complete your details to process your purchase',
     label_name: 'Full name',
     label_email: 'Email address',
     label_phone: 'Phone (optional)',
@@ -246,16 +243,12 @@ const translations = {
 
     // Footer
     footer_description: 'Manufacturer of modern retro microcomputers.',
-    footer_product: 'Product',
-    footer_links_product: ['CoCo-1', 'User Manual', 'Specifications'],
-    footer_company: 'Company',
-    footer_links_company: ['About us', 'Contact', 'Blog'],
-    footer_legal: 'Legal',
-    footer_links_legal: ['Privacy', 'Terms', 'Returns'],
+    footer_product: 'User Manual',
+    footer_company: 'Contact',
     footer_copyright: 'Copyright © 2026 COSSIO COMPUTER. All rights reserved.',
 
     // Notifications
-    notification_preorder_success: 'Pre-order received! We\'ll contact you soon.',
+    notification_preorder_success: 'Purchase received! We\'ll contact you soon.',
     notification_preorder_error: 'Error processing. Please try again.',
     notification_email_invalid: 'Please enter a valid email.',
     notification_name_required: 'Name is required.',
@@ -270,6 +263,7 @@ const translations = {
     bizum_amount_label: 'Amount',
     bizum_concept_label: 'Reference',
     bizum_copy: 'Copy',
+    bizum_payment_done: 'Payment completed',
     bizum_modal_note: 'Payment is confirmed manually after the Bizum transfer is received.',
   }
 };
@@ -291,6 +285,7 @@ let formData = {
   shipping: 'standard'
 };
 const PAYPAL_ME_LINK = 'https://paypal.me/cossiocomputer';
+const ORDER_EMAIL = 'cossio-computer@outlook.com';
 const BIZUM_PHONE = '655131003';
 const BIZUM_CONCEPT = 'CoCo-1';
 const SPANISH_PROVINCES = [
@@ -367,6 +362,7 @@ const paypalBtn = document.querySelector('.btn-paypal');
 const bizumBtn = document.querySelector('.btn-bizum');
 const bizumModal = document.getElementById('bizumModal');
 const bizumModalClose = document.getElementById('bizumModalClose');
+const bizumPaymentDone = document.getElementById('bizumPaymentDone');
 const copyBtns = document.querySelectorAll('.copy-btn');
 
 // ============================================
@@ -483,6 +479,7 @@ function setLanguage(lang) {
   document.getElementById('bizumPhoneLabel').textContent = t.bizum_phone_label;
   document.getElementById('bizumAmountLabel').textContent = t.bizum_amount_label;
   document.getElementById('bizumConceptLabel').textContent = t.bizum_concept_label;
+  document.getElementById('bizumPaymentDone').textContent = t.bizum_payment_done;
   document.getElementById('bizumModalNote').textContent = t.bizum_modal_note;
   copyBtns.forEach(btn => {
     btn.textContent = t.bizum_copy;
@@ -492,7 +489,6 @@ function setLanguage(lang) {
   document.getElementById('footerDescription').textContent = t.footer_description;
   document.getElementById('footerProduct').textContent = t.footer_product;
   document.getElementById('footerCompany').textContent = t.footer_company;
-  document.getElementById('footerLegal').textContent = t.footer_legal;
   document.getElementById('footerCopyright').textContent = t.footer_copyright;
 
   // Update country select options
@@ -599,6 +595,7 @@ function initPayPalPayment() {
   bizumModal?.addEventListener('click', (e) => {
     if (e.target === bizumModal) closeBizumModal();
   });
+  bizumPaymentDone?.addEventListener('click', handleBizumPaymentDone);
   copyBtns.forEach(btn => {
     btn.addEventListener('click', () => copyTextFromTarget(btn.dataset.copyTarget));
   });
@@ -645,6 +642,34 @@ function validatePaymentForm() {
   return { name: name.trim(), email };
 }
 
+function getSelectedText(select) {
+  return select?.selectedOptions?.[0]?.textContent || '';
+}
+
+function getOrderEmailHref(paymentData, paymentMethod) {
+  const subject = `Compra CoCo-1 - ${paymentData.name}`;
+  const body = [
+    'Datos del comprador:',
+    `Nombre: ${paymentData.name}`,
+    `Email: ${paymentData.email}`,
+    `Teléfono: ${document.getElementById('phoneInput')?.value || '-'}`,
+    `Dirección: ${document.getElementById('addressInput')?.value || '-'}`,
+    `Provincia: ${getSelectedText(provinceSelect)}`,
+    `Código postal: ${document.getElementById('postalCodeInput')?.value || '-'}`,
+    `País: ${getSelectedText(countrySelect)}`,
+    '',
+    'Opciones seleccionadas:',
+    `Cantidad: ${quantitySelect?.value || '1'}`,
+    `Carcasa: ${getSelectedText(caseSelect)}`,
+    `Envío: ${getSelectedText(shippingSelect)}`,
+    `Total: ${formatPrice(getCurrentTotal())}`,
+    '',
+    `Método de pago: ${paymentMethod}`
+  ].join('\n');
+
+  return `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 async function handlePayment(e) {
   e.preventDefault();
 
@@ -658,7 +683,16 @@ async function handlePayment(e) {
     return;
   }
 
-  window.open(`${PAYPAL_ME_LINK}/${getCurrentTotal().toFixed(2)}`, '_blank', 'noopener');
+  window.open(getOrderEmailHref(paymentData, 'PayPal.Me'), '_blank', 'noopener');
+  window.location.href = `${PAYPAL_ME_LINK}/${getCurrentTotal().toFixed(2)}`;
+}
+
+function handleBizumPaymentDone() {
+  const paymentData = validatePaymentForm();
+
+  if (!paymentData) return;
+
+  window.open(getOrderEmailHref(paymentData, 'Bizum'), '_blank', 'noopener');
 }
 
 function openBizumModal() {
@@ -809,24 +843,6 @@ preorderForm?.querySelectorAll('input, select').forEach(input => {
 });
 
 // ============================================
-// IMAGE GALLERY
-// ============================================
-const showcaseImages = document.querySelectorAll('.showcase-image img');
-let currentImageIndex = 0;
-
-function cycleShowcaseImages() {
-  if (showcaseImages.length > 1) {
-    currentImageIndex = (currentImageIndex + 1) % showcaseImages.length;
-    showcaseImages.forEach((img, i) => {
-      img.style.opacity = i === currentImageIndex ? '1' : '0.3';
-    });
-  }
-}
-
-// Auto-cycle images every 5 seconds
-setInterval(cycleShowcaseImages, 5000);
-
-// ============================================
 // INITIALIZATION
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -838,9 +854,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize scroll animations
   handleScrollAnimations();
-
-  // Set initial image state
-  cycleShowcaseImages();
 
   // Populate country select
   updateCountryOptions();

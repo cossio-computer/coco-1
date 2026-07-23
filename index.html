@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CoCo-1 BASIC Microcomputer - El microordenador personal que une la nostalgia de los 80 con la tecnología de hoy.">
+  <meta name="description" content="CoCo-1 BASIC Microcomputer - El primer micro-ordenador personal programable completamente desde tu agente de IA de una forma interactiva, rápida y sin necesidad de conocimientos previos de programación en BASIC.">
   <meta name="keywords" content="CoCo-1, microordenador, BASIC, MMBasic, retro, retro computing, SBC">
   <meta name="author" content="COSSIO COMPUTER">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
   <meta property="og:title" content="CoCo-1 BASIC Microcomputer">
-  <meta property="og:description" content="El microordenador personal que une la nostalgia de los 80 con la tecnología de hoy.">
+  <meta property="og:description" content="El primer micro-ordenador personal programable completamente desde tu agente de IA de una forma interactiva, rápida y sin necesidad de conocimientos previos de programación en BASIC.">
   <meta property="og:type" content="product">
   <meta property="og:locale" content="es_ES">
 
@@ -37,7 +37,7 @@
         <li><a href="#features" data-i18n="nav_features">Características</a></li>
         <li><a href="#showcase" data-i18n="nav_showcase">Producto</a></li>
         <li><a href="#testimonials" data-i18n="nav_testimonials">Testimonios</a></li>
-        <li><a href="#preorder" data-i18n="nav_preorder">Reservar</a></li>
+        <li><a href="#preorder" data-i18n="nav_preorder">Comprar</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -63,7 +63,7 @@
       <div class="hero-content fade-in">
         <div class="hero-badge">
           <span>🚀</span>
-          <span id="heroBadge">¡Lanzamiento Diciembre 2026!</span>
+          <span id="heroBadge">¡El primer micro-ordenador programable por la IA!</span>
         </div>
 
         <h1>
@@ -72,12 +72,12 @@
         </h1>
 
         <p class="hero-description" id="heroDescription">
-          El microordenador personal que une la nostalgia de los 80 con la tecnología de hoy. Perfecto para aprender, programar y revivir la magia de la era dorada de la computación.
+          El primer micro-ordenador personal programable completamente desde tu agente de IA de una forma interactiva, rápida y sin necesidad de conocimientos previos de programación en BASIC.
         </p>
 
         <div class="hero-cta">
           <a href="#preorder" class="btn btn-primary" id="heroCtaPrimary">
-            Reservar ahora
+            Comprar ahora
           </a>
           <a href="#showcase" class="btn btn-secondary" id="heroCtaSecondary">
             Saber más
@@ -86,9 +86,9 @@
       </div>
 
       <div class="hero-image fade-in">
-        <img src="images/CoCo-1-placa.png" alt="CoCo-1 Microcomputer">
+        <img src="images/CoCo1.png" alt="CoCo-1 Microcomputer">
         <div class="price-badge">
-          <div class="launch-price" id="launchPriceLabel">Precio Lanzamiento</div>
+          <div class="launch-price" id="launchPriceLabel">Desde</div>
           <div class="old-price" id="oldPrice"></div>
           <div class="new-price" id="newPrice">49,99€</div>
         </div>
@@ -152,16 +152,15 @@
   <section class="showcase" id="showcase">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 id="showcaseTitle">Diseñado para ti</h2>
-        <p id="showcaseSubtitle">Explora las posibilidades del CoCo-1</p>
+        <h2 id="showcaseTitle">Diseñado para la IA</h2>
+        <p id="showcaseSubtitle">Explora las posibilidades de la IA con CoCo-1</p>
       </div>
 
       <div class="showcase-grid">
         <div class="showcase-image fade-in">
-          <img src="images/CoCo-1-placa-front.png" alt="CoCo-1 Front View">
+          <img src="images/CoCo1-Front.png" alt="CoCo-1 Front View">
+          <img src="images/CoCo1-Rear.png" alt="CoCo-1 Rear View">
           <img src="images/CoCo-1-placa.png" alt="CoCo-1 PCB">
-          <img src="images/CoCo-1-placa-rear.png" alt="CoCo-1 Back View">
-          <img src="images/CoCo-1-placa-top.png" alt="CoCo-1 Top View">
         </div>
 
         <div class="showcase-content fade-in">
@@ -302,10 +301,10 @@
   <section class="preorder" id="preorder">
     <div class="container">
       <div class="preorder-content fade-in">
-        <h2 id="preorderTitle">¡Reserva ahora!</h2>
+        <h2 id="preorderTitle">¡Compra ahora!</h2>
         <p id="preorderSubtitle">Asegura tu CoCo-1 al precio especial de lanzamiento</p>
         <p id="preorderDescription">
-          El precio de lanzamiento de 49,99€ está disponible exclusivamente para las primeras reservas. Incluye 2 años de garantía.
+          El precio de lanzamiento de 49,99€ está disponible exclusivamente para las primeras compras. Incluye 2 años de garantía.
         </p>
 
         <ul class="preorder-benefits">
@@ -333,8 +332,8 @@
       </div>
 
       <div class="preorder-form fade-in" id="preorderFormInner">
-        <h3 id="formTitle">Formulario de reserva</h3>
-        <p class="subtitle" id="formSubtitle">Cumplimenta el formulario con tus datos para procesar la reserva</p>
+        <h3 id="formTitle">Formulario de compra</h3>
+        <p class="subtitle" id="formSubtitle">Cumplimenta el formulario con tus datos para procesar la compra</p>
 
         <form id="preorderForm">
           <div class="form-group">
@@ -478,6 +477,8 @@
         </div>
       </div>
 
+      <button type="button" class="btn-payment-done" id="bizumPaymentDone">Pago realizado</button>
+
       <p class="payment-modal-note" id="bizumModalNote">El pago se confirma manualmente tras recibir el Bizum.</p>
     </div>
   </div>
@@ -491,47 +492,19 @@
         <div class="footer-brand">
           <img src="images/Logo-empresa.png" alt="COSSIO COMPUTER">
           <p id="footerDescription">Fabricante de microordenadores retro modernos.</p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
-            <a href="#" class="social-link" aria-label="Facebook">f</a>
-            <a href="#" class="social-link" aria-label="YouTube">▶</a>
-            <a href="#" class="social-link" aria-label="GitHub">⌘</a>
-          </div>
         </div>
 
         <div class="footer-links">
-          <h4 id="footerProduct">Producto</h4>
-          <ul>
-            <li><a href="#features">CoCo-1</a></li>
-            <li><a href="#">Manual de usuario</a></li>
-            <li><a href="#">Especificaciones</a></li>
-          </ul>
+          <h4 id="footerProduct">Manual de usuario</h4>
         </div>
 
         <div class="footer-links">
-          <h4 id="footerCompany">Empresa</h4>
-          <ul>
-            <li><a href="#">Sobre nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links">
-          <h4 id="footerLegal">Legal</h4>
-          <ul>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Términos</a></li>
-            <li><a href="#">Devoluciones</a></li>
-          </ul>
+          <h4><a href="mailto:cossio-computer@outlook.com?subject=Compra%20CoCo-1" id="footerCompany" target="_blank" rel="noopener">Contacto</a></h4>
         </div>
       </div>
 
       <div class="footer-bottom">
         <p id="footerCopyright">© 2026 COSSIO COMPUTER. Todos los derechos reservados.</p>
-        <div>
-          <a href="#">Privacidad</a> · <a href="#">Términos</a>
-        </div>
       </div>
     </div>
   </footer>
