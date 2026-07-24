@@ -125,6 +125,9 @@ const translations = {
     notification_province_required: 'Seleccione una provincia.',
     notification_postal_code_invalid: 'El código postal no corresponde a la provincia seleccionada.',
     notification_payment_link_missing: 'Falta configurar el enlace PayPal.Me.',
+    notification_order_endpoint_missing: 'Falta configurar la clave de Web3Forms.',
+    notification_order_submit_error: 'No se han podido enviar los datos. Inténtelo de nuevo.',
+    notification_order_submit_success: 'Datos enviados correctamente.',
     notification_bizum_phone_missing: 'Falta configurar el teléfono de Bizum.',
     notification_copied: 'Copiado.',
     bizum_modal_title: 'Pagar con Bizum',
@@ -133,7 +136,6 @@ const translations = {
     bizum_amount_label: 'Importe',
     bizum_concept_label: 'Concepto',
     bizum_copy: 'Copiar',
-    bizum_payment_done: 'Pago realizado',
     bizum_modal_note: 'El pago se confirma manualmente tras recibir el Bizum.',
   },
 
@@ -255,6 +257,9 @@ const translations = {
     notification_province_required: 'Please select a province.',
     notification_postal_code_invalid: 'The postal code does not match the selected province.',
     notification_payment_link_missing: 'PayPal.Me link is not configured.',
+    notification_order_endpoint_missing: 'Web3Forms access key is not configured.',
+    notification_order_submit_error: 'Could not send the details. Please try again.',
+    notification_order_submit_success: 'Details sent successfully.',
     notification_bizum_phone_missing: 'Bizum phone number is not configured.',
     notification_copied: 'Copied.',
     bizum_modal_title: 'Pay with Bizum',
@@ -263,7 +268,6 @@ const translations = {
     bizum_amount_label: 'Amount',
     bizum_concept_label: 'Reference',
     bizum_copy: 'Copy',
-    bizum_payment_done: 'Payment completed',
     bizum_modal_note: 'Payment is confirmed manually after the Bizum transfer is received.',
   }
 };
@@ -285,7 +289,7 @@ let formData = {
   shipping: 'standard'
 };
 const PAYPAL_ME_LINK = 'https://paypal.me/cossiocomputer';
-const ORDER_EMAIL = 'cossio-computer@outlook.com';
+const WEB3FORMS_ACCESS_KEY = '6b3962f8-decd-45a1-b57d-6b22d498f1a1';
 const BIZUM_PHONE = '655131003';
 const BIZUM_CONCEPT = 'CoCo-1';
 const SPANISH_PROVINCES = [
@@ -362,7 +366,6 @@ const paypalBtn = document.querySelector('.btn-paypal');
 const bizumBtn = document.querySelector('.btn-bizum');
 const bizumModal = document.getElementById('bizumModal');
 const bizumModalClose = document.getElementById('bizumModalClose');
-const bizumPaymentDone = document.getElementById('bizumPaymentDone');
 const copyBtns = document.querySelectorAll('.copy-btn');
 
 // ============================================
@@ -479,7 +482,6 @@ function setLanguage(lang) {
   document.getElementById('bizumPhoneLabel').textContent = t.bizum_phone_label;
   document.getElementById('bizumAmountLabel').textContent = t.bizum_amount_label;
   document.getElementById('bizumConceptLabel').textContent = t.bizum_concept_label;
-  document.getElementById('bizumPaymentDone').textContent = t.bizum_payment_done;
   document.getElementById('bizumModalNote').textContent = t.bizum_modal_note;
   copyBtns.forEach(btn => {
     btn.textContent = t.bizum_copy;
@@ -595,7 +597,6 @@ function initPayPalPayment() {
   bizumModal?.addEventListener('click', (e) => {
     if (e.target === bizumModal) closeBizumModal();
   });
-  bizumPaymentDone?.addEventListener('click', handleBizumPaymentDone);
   copyBtns.forEach(btn => {
     btn.addEventListener('click', () => copyTextFromTarget(btn.dataset.copyTarget));
   });
@@ -646,28 +647,54 @@ function getSelectedText(select) {
   return select?.selectedOptions?.[0]?.textContent || '';
 }
 
-function getOrderEmailHref(paymentData, paymentMethod) {
-  const subject = `Compra CoCo-1 - ${paymentData.name}`;
-  const body = [
-    'Datos del comprador:',
-    `Nombre: ${paymentData.name}`,
-    `Email: ${paymentData.email}`,
-    `Teléfono: ${document.getElementById('phoneInput')?.value || '-'}`,
-    `Dirección: ${document.getElementById('addressInput')?.value || '-'}`,
-    `Provincia: ${getSelectedText(provinceSelect)}`,
-    `Código postal: ${document.getElementById('postalCodeInput')?.value || '-'}`,
-    `País: ${getSelectedText(countrySelect)}`,
-    '',
-    'Opciones seleccionadas:',
-    `Cantidad: ${quantitySelect?.value || '1'}`,
-    `Carcasa: ${getSelectedText(caseSelect)}`,
-    `Envío: ${getSelectedText(shippingSelect)}`,
-    `Total: ${formatPrice(getCurrentTotal())}`,
-    '',
-    `Método de pago: ${paymentMethod}`
-  ].join('\n');
+function getOrderData(paymentData, paymentMethod) {
+  return {
+    access_key: WEB3FORMS_ACCESS_KEY,
+    subject: `Compra CoCo-1 - ${paymentData.name}`,
+    from_name: paymentData.name,
+    paymentMethod,
+    name: paymentData.name,
+    email: paymentData.email,
+    phone: document.getElementById('phoneInput')?.value || '-',
+    address: document.getElementById('addressInput')?.value || '-',
+    province: getSelectedText(provinceSelect),
+    postalCode: document.getElementById('postalCodeInput')?.value || '-',
+    country: getSelectedText(countrySelect),
+    quantity: quantitySelect?.value || '1',
+    caseOption: getSelectedText(caseSelect),
+    shipping: getSelectedText(shippingSelect),
+    total: formatPrice(getCurrentTotal()),
+  };
+}
 
-  return `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+async function sendOrderData(paymentData, paymentMethod) {
+  const t = translations[currentLang];
+
+  if (!WEB3FORMS_ACCESS_KEY) {
+    showNotification(t.notification_order_endpoint_missing, 'error');
+    return false;
+  }
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(getOrderData(paymentData, paymentMethod)),
+    });
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'Web3Forms submit failed');
+    }
+
+    return true;
+  } catch (error) {
+    showNotification(t.notification_order_submit_error, 'error');
+    return false;
+  }
 }
 
 async function handlePayment(e) {
@@ -683,16 +710,18 @@ async function handlePayment(e) {
     return;
   }
 
-  window.open(getOrderEmailHref(paymentData, 'PayPal.Me'), '_blank', 'noopener');
-  window.location.href = `${PAYPAL_ME_LINK}/${getCurrentTotal().toFixed(2)}`;
-}
+  paypalBtn.classList.add('loading');
+  paypalBtn.disabled = true;
 
-function handleBizumPaymentDone() {
-  const paymentData = validatePaymentForm();
+  const orderSent = await sendOrderData(paymentData, 'PayPal.Me');
 
-  if (!paymentData) return;
+  if (!orderSent) {
+    paypalBtn.classList.remove('loading');
+    paypalBtn.disabled = false;
+    return;
+  }
 
-  window.open(getOrderEmailHref(paymentData, 'Bizum'), '_blank', 'noopener');
+  window.open(`${PAYPAL_ME_LINK}/${getCurrentTotal().toFixed(2)}`, '_blank', 'noopener');
 }
 
 function openBizumModal() {
@@ -721,7 +750,7 @@ async function copyTextFromTarget(targetId) {
   }
 }
 
-function handleBizumPayment() {
+async function handleBizumPayment() {
   const t = translations[currentLang];
   const paymentData = validatePaymentForm();
 
@@ -731,6 +760,14 @@ function handleBizumPayment() {
     showNotification(t.notification_bizum_phone_missing, 'error');
     return;
   }
+
+  bizumBtn.classList.add('loading');
+  bizumBtn.disabled = true;
+  const orderSent = await sendOrderData(paymentData, 'Bizum');
+  bizumBtn.classList.remove('loading');
+  bizumBtn.disabled = false;
+
+  if (!orderSent) return;
 
   openBizumModal();
 }

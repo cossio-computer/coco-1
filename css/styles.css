@@ -887,23 +887,6 @@ p { max-width: 65ch; }
   font-weight: 600;
 }
 
-.btn-payment-done {
-  width: 100%;
-  border: none;
-  border-radius: var(--radius-sm);
-  background: var(--accent);
-  color: white;
-  padding: 0.875rem 1rem;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.btn-payment-done:hover {
-  background: var(--accent-hover);
-}
-
 .payment-modal-note {
   font-size: 0.875rem;
 }
