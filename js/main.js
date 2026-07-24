@@ -109,7 +109,7 @@ const translations = {
     select_option: 'Seleccionar...',
 
     // Footer
-    footer_description: 'Fabricante de microordenadores retro modernos.',
+    footer_description: '"Ideas fantásticas para un mundo fantástico"',
     footer_product: 'Manual de usuario',
     footer_company: 'Contacto',
     footer_copyright: 'Copyright © 2026 COSSIO COMPUTER. Todos los derechos reservados.',
@@ -238,7 +238,7 @@ const translations = {
     select_option: 'Select...',
 
     // Footer
-    footer_description: 'Manufacturer of modern retro microcomputers.',
+    footer_description: '"Fantastic ideas for a fantastic world"',
     footer_product: 'User Manual',
     footer_company: 'Contact',
     footer_copyright: 'Copyright © 2026 COSSIO COMPUTER. All rights reserved.',
