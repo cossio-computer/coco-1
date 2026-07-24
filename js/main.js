@@ -10,15 +10,15 @@ const translations = {
   es: {
     // Navigation
     nav_features: 'Características',
-    nav_showcase: 'IA',
-    nav_testimonials: 'Testimonios',
+    nav_showcase: 'Modo IA',
+    nav_testimonials: 'Arquitectura IA',
     nav_preorder: 'Comprar',
 
     // Hero
     hero_badge: '¡El primer micro-ordenador programable por la IA!',
     hero_title: 'CoCo-1',
-    hero_title_suffix: ' BASIC Microcomputer',
-    hero_description: 'El primer micro-ordenador personal programable completamente desde tu agente de IA de una forma interactiva, rápida y sin necesidad de conocimientos previos de programación en BASIC.',
+    hero_title_suffix: ' IA Ready Microcomputer',
+    hero_description: 'El primer micro-ordenador personal totalmente programable desde tu agente de IA en tu PC de una forma interactiva, rápida y sin necesidad de conocimientos previos de programación.',
     hero_cta_primary: 'Comprar ahora',
     hero_cta_secondary: 'Saber más',
     launch_price: 'Desde',
@@ -61,27 +61,26 @@ const translations = {
     spec_dimensions: 'Dimensiones',
 
     // Testimonials
-    testimonials_title: 'Lo que dicen nuestros testers',
-    testimonials_subtitle: 'Descubre qué opinan los primeros usuarios del CoCo-1',
-    testimonial_1_quote: 'He probado otros proyectos retro, pero el CoCo-1 me ha sorprendido. La velocidad del BASIC es increíble y el hecho de tener VGA y USB es genial.',
-    testimonial_1_author: 'Carlos Martínez',
-    testimonial_1_role: 'Entusiasta retro',
-    testimonial_2_quote: 'Perfecto para enseñar programación a mis hijos. La curva de aprendizaje es suave pero permite hacer cosas muy complejas cuando quieres.',
-    testimonial_2_author: 'María García',
-    testimonial_2_role: 'Profesora de informática',
-    testimonial_3_quote: 'Lo uso como consola de desarrollo para mis proyectos de electrónica. Tener un intérprete BASIC rápido y un puerto de expansión no tiene precio.',
-    testimonial_3_author: 'Antonio Ruiz',
-    testimonial_3_role: 'Ingeniero electrónico',
+    testimonials_title: 'Puerto IA + OpenCode + BASIC',
+    testimonials_subtitle: 'La combinación ganadora en IA',
+    testimonial_1_quote: 'El hardware del CoCo-1 dispone de un puerto de comunicación dedicado exclusivamente al diálogo con el agente de IA mediante una skill desarrollada a tal fin.',
+    testimonial_1_author: 'Puerto IA',
+    testimonial_1_role: '',
+    testimonial_2_quote: 'OpenCode es el agente ideal para trabajar con CoCo-1 ya que es una solución de código abierto que incluye el uso de modelos gratis para la codificación.',
+    testimonial_2_author: 'Agente de IA',
+    testimonial_2_role: '',
+    testimonial_3_quote: 'El lenguaje de programación BASIC es un lenguaje interpretado, interactivo y rápido que permite aumentar la eficiencia en los ciclos de codificación y depuración.',
+    testimonial_3_author: 'Lenguaje BASIC',
+    testimonial_3_role: '',
 
     // Preorder
     preorder_title: '¡Compra ahora!',
     preorder_subtitle: 'Asegura tu CoCo-1 al precio especial de lanzamiento',
-    preorder_description: 'El precio de lanzamiento de 49,99€ está disponible exclusivamente para las primeras compras. Incluye 2 años de garantía.',
-    benefit_1: 'Precio especial de lanzamiento',
-    benefit_2: 'Garantía de 2 años',
-    benefit_3: 'Acceso prioritario',
-    benefit_4: 'Soporte técnico incluido',
-    benefit_5: 'Manual en español',
+    preorder_description: 'Disponible en dos versiones igualmente funcionales que van desde la placa PCB con los componentes electrónicos ensamblados a la misma placa PCB en una elegante y robusta carcasa de plástico ABS con perfiles frontales y traseros serigrafiados.',
+    benefit_1: 'Hardware CoCo-1 en la versión elegida',
+    benefit_2: 'Manual de Usuario en español en PDF',
+    benefit_3: 'Cinco juegos precargados: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird y Welcome (una demostración gráfica)',
+    benefit_4: 'El envío no incluye pantalla, cable VGA, teclado USB, alimentador USB ni cable para el puerto IA que corren a cargo del cliente',
     form_title: 'Formulario de compra',
     form_subtitle: 'Cumplimenta el formulario con tus datos para procesar la compra',
     label_name: 'Nombre completo',
@@ -90,16 +89,14 @@ const translations = {
     label_address: 'Dirección',
     label_province: 'Provincia',
     label_postal_code: 'Código postal',
+    placeholder_name: 'Nombre y apellidos',
     placeholder_address: 'Calle, número, piso',
     placeholder_postal_code: '00000',
     label_country: 'País',
     label_quantity: 'Cantidad',
-    label_case: 'Carcasa',
-    case_yes: 'PCB+Carcasa',
-    case_no: 'Sólo PCB',
-    label_shipping: 'Envío',
-    shipping_standard: 'Estándar (5-7 días) - 10€',
-    shipping_express: 'Exprés (2-3 días) - 15€',
+    label_case: 'Configuración',
+    case_yes: 'PCB ensamblada con carcasa ABS',
+    case_no: 'PCB ensamblada',
     price_subtotal: 'Subtotal',
     price_shipping: 'Envío',
     price_total: 'Total',
@@ -139,15 +136,15 @@ const translations = {
   en: {
     // Navigation
     nav_features: 'Features',
-    nav_showcase: 'AI',
-    nav_testimonials: 'Testimonials',
+    nav_showcase: 'AI Mode',
+    nav_testimonials: 'AI Architecture',
     nav_preorder: 'Buy',
 
     // Hero
     hero_badge: 'The first AI-programmable microcomputer!',
     hero_title: 'CoCo-1',
-    hero_title_suffix: ' BASIC Microcomputer',
-    hero_description: 'The first personal microcomputer fully programmable from your AI agent in an interactive, fast way, with no prior BASIC programming knowledge required.',
+    hero_title_suffix: ' AI Ready Microcomputer',
+    hero_description: 'The first personal microcomputer fully programmable from your AI agent on your PC in an interactive, fast way, with no prior programming knowledge required.',
     hero_cta_primary: 'Buy Now',
     hero_cta_secondary: 'Learn More',
     launch_price: 'From',
@@ -190,27 +187,26 @@ const translations = {
     spec_dimensions: 'Dimensions',
 
     // Testimonials
-    testimonials_title: 'What our testers say',
-    testimonials_subtitle: 'Discover what early CoCo-1 users think',
-    testimonial_1_quote: 'I\'ve tried many retro projects, but the CoCo-1 has surprised me. The BASIC speed is incredible and having VGA and USB is great.',
-    testimonial_1_author: 'Carlos Martínez',
-    testimonial_1_role: 'Retro enthusiast',
-    testimonial_2_quote: 'Perfect for teaching my kids programming. The learning curve is gentle but allows for very complex things when you want.',
-    testimonial_2_author: 'María García',
-    testimonial_2_role: 'Computer science teacher',
-    testimonial_3_quote: 'I use it as a development console for my electronic projects. Having a fast BASIC interpreter and an expansion port is invaluable.',
-    testimonial_3_author: 'Antonio Ruiz',
-    testimonial_3_role: 'Electronics engineer',
+    testimonials_title: 'AI Port + OpenCode + BASIC',
+    testimonials_subtitle: 'The winning combination in AI',
+    testimonial_1_quote: 'CoCo-1 hardware includes a communication port dedicated exclusively to dialogue with the AI agent through a skill developed for that purpose.',
+    testimonial_1_author: 'AI Port',
+    testimonial_1_role: '',
+    testimonial_2_quote: 'OpenCode is the ideal agent for working with CoCo-1 because it is an open-source solution that includes the use of free models for coding.',
+    testimonial_2_author: 'AI Agent',
+    testimonial_2_role: '',
+    testimonial_3_quote: 'The BASIC programming language is an interpreted, interactive, and fast language that increases efficiency in coding and debugging cycles.',
+    testimonial_3_author: 'BASIC Language',
+    testimonial_3_role: '',
 
     // Preorder
     preorder_title: 'Buy Now!',
     preorder_subtitle: 'Get your CoCo-1 at the special launch price',
-    preorder_description: 'The launch price of 49,99€ is available exclusively for early purchases. Includes 2-year warranty.',
-    benefit_1: 'Special launch price',
-    benefit_2: '2-year warranty',
-    benefit_3: 'Priority access',
-    benefit_4: 'Technical support included',
-    benefit_5: 'Manual in Spanish',
+    preorder_description: 'Available in two equally functional versions, from the PCB board with assembled electronic components to the same PCB board in an elegant and robust ABS plastic case with screen-printed front and rear panels.',
+    benefit_1: 'CoCo-1 hardware in the selected version',
+    benefit_2: 'User manual in Spanish as a PDF',
+    benefit_3: 'Five preloaded games: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird and Welcome (a graphical demo)',
+    benefit_4: 'Shipping does not include a screen, VGA cable, USB keyboard, USB power adapter, or AI port cable, which are the customer\'s responsibility',
     form_title: 'Purchase Form',
     form_subtitle: 'Complete your details to process your purchase',
     label_name: 'Full name',
@@ -219,16 +215,14 @@ const translations = {
     label_address: 'Address',
     label_province: 'Province',
     label_postal_code: 'Postal code',
+    placeholder_name: 'First and last name',
     placeholder_address: 'Street, number, apartment',
     placeholder_postal_code: 'Postal code',
     label_country: 'Country',
     label_quantity: 'Quantity',
-    label_case: 'Case',
-    case_yes: 'PCB+Case',
-    case_no: 'PCB only',
-    label_shipping: 'Shipping',
-    shipping_standard: 'Standard (5-7 days) - €10',
-    shipping_express: 'Express (2-3 days) - €15',
+    label_case: 'Configuration',
+    case_yes: 'Assembled PCB with ABS case',
+    case_no: 'Assembled PCB',
     price_subtotal: 'Subtotal',
     price_shipping: 'Shipping',
     price_total: 'Total',
@@ -279,8 +273,7 @@ let formData = {
   postalCode: '',
   country: 'ES',
   quantity: 1,
-  caseOption: 'no',
-  shipping: 'standard'
+  caseOption: 'no'
 };
 const PAYPAL_ME_LINK = 'https://paypal.me/cossiocomputer';
 const WEB3FORMS_ACCESS_KEY = '6b3962f8-decd-45a1-b57d-6b22d498f1a1';
@@ -353,7 +346,6 @@ const fadeElements = document.querySelectorAll('.fade-in');
 const preorderForm = document.getElementById('preorderForm');
 const quantitySelect = document.getElementById('quantity');
 const caseSelect = document.getElementById('caseOption');
-const shippingSelect = document.getElementById('shipping');
 const countrySelect = document.getElementById('country');
 const provinceSelect = document.getElementById('provinceInput');
 const paypalBtn = document.querySelector('.btn-paypal');
@@ -441,7 +433,6 @@ function setLanguage(lang) {
   document.getElementById('benefit2').textContent = t.benefit_2;
   document.getElementById('benefit3').textContent = t.benefit_3;
   document.getElementById('benefit4').textContent = t.benefit_4;
-  document.getElementById('benefit5').textContent = t.benefit_5;
   document.getElementById('formTitle').textContent = t.form_title;
   document.getElementById('formSubtitle').textContent = t.form_subtitle;
   document.getElementById('labelName').textContent = t.label_name;
@@ -450,6 +441,7 @@ function setLanguage(lang) {
   document.getElementById('labelAddress').textContent = t.label_address;
   document.getElementById('labelProvince').textContent = t.label_province;
   document.getElementById('labelPostalCode').textContent = t.label_postal_code;
+  document.getElementById('nameInput').placeholder = t.placeholder_name;
   document.getElementById('addressInput').placeholder = t.placeholder_address;
   document.getElementById('postalCodeInput').placeholder = t.placeholder_postal_code;
   document.getElementById('labelCountry').textContent = t.label_country;
@@ -457,9 +449,6 @@ function setLanguage(lang) {
   document.getElementById('labelCase').textContent = t.label_case;
   document.getElementById('caseNo').textContent = t.case_no;
   document.getElementById('caseYes').textContent = t.case_yes;
-  document.getElementById('labelShipping').textContent = t.label_shipping;
-  document.getElementById('shippingStandard').textContent = t.shipping_standard;
-  document.getElementById('shippingExpress').textContent = t.shipping_express;
   document.getElementById('priceSubtotalLabel').textContent = t.price_subtotal;
   document.getElementById('priceShippingLabel').textContent = t.price_shipping;
   document.getElementById('priceTotalLabel').textContent = t.price_total;
@@ -541,8 +530,8 @@ function updateProvinceOptions() {
 // ============================================
 const UNIT_PRICE = 49.99;
 const UNIT_PRICE_WITH_CASE = 99.99;
-const SHIPPING_STANDARD = 10;
-const SHIPPING_EXPRESS = 15;
+const SHIPPING_ES_BASE = 10;
+const SHIPPING_INTERNATIONAL_BASE = 25;
 
 function formatPrice(amount) {
   return `${amount.toLocaleString('es-ES', {
@@ -554,23 +543,40 @@ function formatPrice(amount) {
 function getCurrentTotal() {
   const quantity = parseInt(quantitySelect?.value || 1);
   const unitPrice = caseSelect?.value === 'yes' ? UNIT_PRICE_WITH_CASE : UNIT_PRICE;
-  const shipping = shippingSelect?.value || 'standard';
-  const shippingCost = shipping === 'express' ? SHIPPING_EXPRESS : SHIPPING_STANDARD;
 
-  return unitPrice * quantity + shippingCost;
+  return unitPrice * quantity + getShippingCost();
+}
+
+function getShippingCost() {
+  const quantity = parseInt(quantitySelect?.value || 1);
+  const baseShipping = countrySelect?.value === 'ES' ? SHIPPING_ES_BASE : SHIPPING_INTERNATIONAL_BASE;
+
+  return baseShipping + Math.max(quantity - 1, 0);
+}
+
+function getShippingDescription() {
+  return `${getShippingLabel()} - ${formatPrice(getShippingCost())}`;
+}
+
+function getShippingLabel() {
+  if (countrySelect?.value === 'ES') {
+    return currentLang === 'es' ? 'Envío estándar (5-7 días)' : 'Standard shipping (5-7 days)';
+  }
+
+  return currentLang === 'es' ? 'Envío Internacional (15 días)' : 'International shipping (15 days)';
 }
 
 function updatePrices() {
   const quantity = parseInt(quantitySelect?.value || 1);
   const unitPrice = caseSelect?.value === 'yes' ? UNIT_PRICE_WITH_CASE : UNIT_PRICE;
-  const shipping = shippingSelect?.value || 'standard';
-  const shippingCost = shipping === 'express' ? SHIPPING_EXPRESS : SHIPPING_STANDARD;
+  const shippingCost = getShippingCost();
   const subtotal = unitPrice * quantity;
   const total = getCurrentTotal();
 
   document.getElementById('qtyDisplay').textContent = quantity;
   document.getElementById('unitPriceDisplay').textContent = formatPrice(unitPrice);
   document.getElementById('subtotalAmount').textContent = formatPrice(subtotal);
+  document.getElementById('priceShippingLabel').textContent = getShippingLabel();
   document.getElementById('shippingAmount').textContent = formatPrice(shippingCost);
   document.getElementById('totalAmount').textContent = formatPrice(total);
   document.getElementById('bizumAmountValue').textContent = formatPrice(total);
@@ -651,7 +657,7 @@ function getOrderData(paymentData, paymentMethod) {
     country: getSelectedText(countrySelect),
     quantity: quantitySelect?.value || '1',
     caseOption: getSelectedText(caseSelect),
-    shipping: getSelectedText(shippingSelect),
+    shipping: getShippingDescription(),
     total: formatPrice(getCurrentTotal()),
   };
 }
@@ -859,7 +865,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================================
 quantitySelect?.addEventListener('change', updatePrices);
 caseSelect?.addEventListener('change', updatePrices);
-shippingSelect?.addEventListener('change', updatePrices);
+countrySelect?.addEventListener('change', updatePrices);
 
 // Form input tracking
 preorderForm?.querySelectorAll('input, select').forEach(input => {

@@ -462,7 +462,7 @@ p { max-width: 65ch; }
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 4.5rem;
+  gap: 5.25rem;
 }
 
 .showcase-image img {
@@ -553,8 +553,16 @@ p { max-width: 65ch; }
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.architecture-plus {
+  color: var(--accent);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .testimonial-card {
@@ -591,6 +599,11 @@ p { max-width: 65ch; }
   font-family: inherit;
 }
 
+.testimonial-quote.no-quotes::before,
+.testimonial-quote.no-quotes::after {
+  content: none;
+}
+
 .testimonial-author {
   display: flex;
   align-items: center;
@@ -610,6 +623,39 @@ p { max-width: 65ch; }
   font-size: 1.25rem;
 }
 
+.robot-avatar {
+  font-size: 1.55rem;
+}
+
+.serial-avatar {
+  display: grid;
+  grid-template-columns: repeat(5, 5px);
+  grid-template-rows: repeat(2, 5px);
+  gap: 5px 4px;
+  place-content: center;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.serial-avatar span {
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+}
+
+.serial-avatar span:nth-child(n+6) {
+  transform: translateX(4px);
+}
+
+.binary-avatar {
+  flex-direction: column;
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  line-height: 1;
+  letter-spacing: -0.06rem;
+}
+
 .testimonial-info h4 {
   font-size: 1rem;
   color: var(--midnight);
@@ -618,6 +664,10 @@ p { max-width: 65ch; }
 .testimonial-info p {
   font-size: 0.875rem;
   color: var(--text-muted);
+}
+
+.testimonial-info p:empty {
+  display: none;
 }
 
 /* ============================================
@@ -633,12 +683,19 @@ p { max-width: 65ch; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .preorder-content h2 {
   margin-bottom: 1.5rem;
   color: white;
+}
+
+.preorder-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
 }
 
 .preorder-content p {
@@ -656,7 +713,7 @@ p { max-width: 65ch; }
 
 .preorder-benefits li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.75rem;
 }
 
@@ -669,18 +726,25 @@ p { max-width: 65ch; }
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
 }
 
 .preorder-product-image {
   display: block;
-  width: min(92%, 430px);
+  position: absolute;
+  left: 0;
+  top: calc(50% - 2.5cm);
+  width: min(112%, 525px);
   height: auto;
-  margin-top: 3.5rem;
+  transform: translateX(-1rem);
 }
 
 .preorder-product-image + .preorder-product-image {
-  width: min(102%, 520px);
-  margin-top: 2.5rem;
+  top: auto;
+  bottom: -1cm;
+  width: min(110%, 560px);
+  transform: translateX(1rem);
   filter: brightness(1.12) contrast(1.04);
 }
 
@@ -737,7 +801,7 @@ p { max-width: 65ch; }
 }
 
 .preorder-options-row {
-  grid-template-columns: 1fr 2fr 3fr;
+  grid-template-columns: 1fr 5fr;
 }
 
 .price-summary {
@@ -1079,9 +1143,16 @@ p { max-width: 65ch; }
     justify-content: center;
   }
 
-  .features-grid,
-  .testimonials-grid {
+  .features-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-plus {
+    text-align: center;
   }
 
   .showcase-grid,
@@ -1101,6 +1172,14 @@ p { max-width: 65ch; }
 
   .showcase-image img {
     width: 100%;
+  }
+
+  .preorder-product-image,
+  .preorder-product-image + .preorder-product-image {
+    position: static;
+    width: min(100%, 520px);
+    margin: 2rem auto 0;
+    transform: none;
   }
 
   .footer-content {
