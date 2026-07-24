@@ -10,7 +10,7 @@ const translations = {
   es: {
     // Navigation
     nav_features: 'Características',
-    nav_showcase: 'Producto',
+    nav_showcase: 'IA',
     nav_testimonials: 'Testimonios',
     nav_preorder: 'Comprar',
 
@@ -33,7 +33,7 @@ const translations = {
     feature_2_title: 'Teclado USB',
     feature_2_desc: 'Compatible con cualquier teclado PC estándar. Configurable para ES, US, UK, DE, FR. Mayúsculas y minúsculas acentuadas y caracteres especiales como la ñ en el teclado español.',
     feature_3_title: 'BASIC avanzado',
-    feature_3_desc: 'Intérprete MMBASIC compatible con Microsoft BASIC, con soporte para comandos gráficos, sonido y aritmética 64 bits. Editor incorporado para la edición de programas con sintaxis coloreada.',
+    feature_3_desc: 'Intérprete de BASIC compatible con Microsoft BASIC, con soporte para comandos gráficos, sonido y aritmética 64 bits. Editor incorporado para la edición de programas con sintaxis coloreada.',
     feature_4_title: 'Almacenamiento SD',
     feature_4_desc: 'Tarjeta SD hasta 32GB FAT16/FAT32. LED de actividad para lectura/escritura.',
     feature_5_title: 'Gráficos y sonido',
@@ -44,15 +44,12 @@ const translations = {
     // Showcase
     showcase_title: 'Diseñado para la IA',
     showcase_subtitle: 'Explora las posibilidades de la IA con CoCo-1',
-    showcase_features: 'Características principales',
-    check_vga: 'Salida VGA estándar',
-    check_keyboard: 'Teclado USB universal',
-    check_basic: 'Intérprete BASIC avanzado',
-    check_sd: 'Almacenamiento SD',
-    check_sound: 'Sonido estéreo',
-    check_expansion: 'Puerto de expansión',
-    check_rtc: 'Reloj en tiempo real (RTC) con pila',
-    check_serial: 'Puertos RS232',
+    showcase_features: 'Configura el modo IA',
+    check_vga: 'Compatible con los agentes de IA más populares: Claude Code, OpenAI Codex, GitHub Copilot, OpenCode, etc',
+    check_keyboard: 'Conecta el CoCo-1 a tu ordenador Windows, Mac o Linux mediante el puerto serie (puede ser necesario un adaptador USB a Serie en el PC)',
+    check_basic: 'Abre tu agente de IA y selecciona la skill de programación de CoCo-1 suministrada',
+    check_sd: 'A partir de ahora ya puedes chatear con tu agente de IA y pedirle que codifique el programa que quieras hacer. De forma interactiva verás en la pantalla del CoCo-1 cómo va editando el programa y depurándolo hasta que funcione como tú deseas',
+    check_sound: 'Una vez programado, el código queda guardado en el CoCo-1 para ejecutarlo o modificarlo a tu gusto',
     specs_title: 'Especificaciones',
     spec_cpu: 'Procesador',
     spec_speed: 'Velocidad BASIC',
@@ -142,7 +139,7 @@ const translations = {
   en: {
     // Navigation
     nav_features: 'Features',
-    nav_showcase: 'Product',
+    nav_showcase: 'AI',
     nav_testimonials: 'Testimonials',
     nav_preorder: 'Buy',
 
@@ -165,7 +162,7 @@ const translations = {
     feature_2_title: 'USB Keyboard',
     feature_2_desc: 'Compatible with any standard PC keyboard. Configurable for ES, US, UK, DE, FR layouts. Accented uppercase and lowercase letters and special characters such as ñ on the Spanish keyboard.',
     feature_3_title: 'Advanced BASIC',
-    feature_3_desc: 'MMBASIC interpreter compatible with Microsoft BASIC, with support for graphics commands, sound, and 64-bit arithmetic. Built-in editor for program editing with syntax highlighting.',
+    feature_3_desc: 'BASIC interpreter compatible with Microsoft BASIC, with support for graphics commands, sound, and 64-bit arithmetic. Built-in editor for program editing with syntax highlighting.',
     feature_4_title: 'SD Storage',
     feature_4_desc: 'SD card up to 32GB FAT16/FAT32. Activity LED for read/write operations.',
     feature_5_title: 'Graphics & Sound',
@@ -176,15 +173,12 @@ const translations = {
     // Showcase
     showcase_title: 'Designed for AI',
     showcase_subtitle: 'Explore the possibilities of AI with CoCo-1',
-    showcase_features: 'Main Features',
-    check_vga: 'Standard VGA output',
-    check_keyboard: 'Universal USB keyboard',
-    check_basic: 'Advanced BASIC interpreter',
-    check_sd: 'SD card storage',
-    check_sound: 'Stereo sound',
-    check_expansion: 'Expansion port',
-    check_rtc: 'Real-time clock (RTC) with battery',
-    check_serial: 'RS232 ports',
+    showcase_features: 'Configure AI mode',
+    check_vga: 'Compatible with the most popular AI agents: Claude Code, OpenAI Codex, GitHub Copilot, OpenCode, etc',
+    check_keyboard: 'Connect CoCo-1 to your Windows, Mac, or Linux computer through the serial port (a USB-to-serial adapter may be required on the PC)',
+    check_basic: 'Open your AI agent and select the included CoCo-1 programming skill',
+    check_sd: 'From now on, you can chat with your AI agent and ask it to code the program you want to create. Interactively, you will see on the CoCo-1 screen how it edits and debugs the program until it works the way you want',
+    check_sound: 'Once programmed, the code remains saved on the CoCo-1 so you can run it or modify it however you like',
     specs_title: 'Specifications',
     spec_cpu: 'Processor',
     spec_speed: 'BASIC Speed',
@@ -426,11 +420,6 @@ function setLanguage(lang) {
   document.getElementById('checkBasic').textContent = t.check_basic;
   document.getElementById('checkSd').textContent = t.check_sd;
   document.getElementById('checkSound').textContent = t.check_sound;
-  document.getElementById('checkExpansion').textContent = t.check_expansion;
-  document.getElementById('checkRtc').textContent = t.check_rtc;
-  document.getElementById('checkSerial').textContent = t.check_serial;
-  document.getElementById('specsTitle').textContent = t.specs_title;
-
   // Testimonials
   document.getElementById('testimonialsTitle').textContent = t.testimonials_title;
   document.getElementById('testimonialsSubtitle').textContent = t.testimonials_subtitle;

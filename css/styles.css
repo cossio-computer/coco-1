@@ -454,16 +454,15 @@ p { max-width: 65ch; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: stretch;
+  align-items: start;
 }
 
 .showcase-image {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  gap: 0.5rem;
-  height: 100%;
+  gap: 4.5rem;
 }
 
 .showcase-image img {
@@ -634,7 +633,7 @@ p { max-width: 65ch; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: center;
+  align-items: start;
 }
 
 .preorder-content h2 {
@@ -670,6 +669,19 @@ p { max-width: 65ch; }
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
+}
+
+.preorder-product-image {
+  display: block;
+  width: min(92%, 430px);
+  height: auto;
+  margin-top: 3.5rem;
+}
+
+.preorder-product-image + .preorder-product-image {
+  width: min(102%, 520px);
+  margin-top: 2.5rem;
+  filter: brightness(1.12) contrast(1.04);
 }
 
 .preorder-form {
