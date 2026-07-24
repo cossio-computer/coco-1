@@ -9,9 +9,9 @@
 const translations = {
   es: {
     // Navigation
-    nav_features: 'Características',
+    nav_features: 'Especificaciones',
     nav_showcase: 'Modo IA',
-    nav_testimonials: 'Arquitectura IA',
+    nav_testimonials: 'Ecosistema IA',
     nav_preorder: 'Comprar',
 
     // Hero
@@ -26,20 +26,20 @@ const translations = {
     new_price: '49,99€',
 
     // Features
-    features_title: 'Características',
+    features_title: 'Especificaciones',
     features_subtitle: 'Todo lo que necesitas en un microordenador compacto y potente',
     feature_1_title: 'Salida VGA',
     feature_1_desc: 'Resolución 640x480 monocromo o 320x240 con soporte de hasta 16 colores.',
     feature_2_title: 'Teclado USB',
-    feature_2_desc: 'Compatible con cualquier teclado PC estándar. Configurable para ES, US, UK, DE, FR. Mayúsculas y minúsculas acentuadas y caracteres especiales como la ñ en el teclado español.',
-    feature_3_title: 'BASIC avanzado',
-    feature_3_desc: 'Intérprete de BASIC compatible con Microsoft BASIC, con soporte para comandos gráficos, sonido y aritmética 64 bits. Editor incorporado para la edición de programas con sintaxis coloreada.',
+    feature_2_desc: 'Compatible con cualquier teclado PC estándar. Soporte de mayúsculas y minúsculas acentuadas y caracteres especiales como la ñ en el teclado español.',
+    feature_3_title: 'Intérprete BASIC',
+    feature_3_desc: 'Intérprete de BASIC avanzado compatible con Microsoft BASIC. Editor incorporado para la edición avanzada de programas y con sintaxis coloreada.',
     feature_4_title: 'Almacenamiento SD',
     feature_4_desc: 'Tarjeta SD hasta 32GB FAT16/FAT32. LED de actividad para lectura/escritura.',
     feature_5_title: 'Gráficos y sonido',
-    feature_5_desc: 'Gráficos 16 colores, sonido estéreo, 8 tipos de letra, sprites ... Incluye 5 juegos: Tetris, Asteroids, Space Invaders, PacMan y Flappy Bird.',
+    feature_5_desc: 'Gráficos 16 colores, sonido estéreo con control de volumen, 8 tipos de letra, sprites ... Incluye 5 juegos: Tetris, Asteroids, Space Invaders, PacMan y Flappy Bird.',
     feature_6_title: 'Interfaces',
-    feature_6_desc: '2 puertos serie RS-232, VGA, USB para teclado, conector de expansión con 11 pines de Entrada/Salida digitales o analógicas, Interruptor y alimentación por USB-C.',
+    feature_6_desc: 'Dos puertos serie RS-232, uno de ellos dedicado en exclusiva como puerto IA. Conector de expansión con 11 pines programables de Entrada/Salida digitales o analógicas.',
 
     // Showcase
     showcase_title: 'Diseñado para la IA',
@@ -47,7 +47,7 @@ const translations = {
     showcase_features: 'Configura el modo IA',
     check_vga: 'Compatible con los agentes de IA más populares: Claude Code, OpenAI Codex, GitHub Copilot, OpenCode, etc',
     check_keyboard: 'Conecta el CoCo-1 a tu ordenador Windows, Mac o Linux mediante el puerto serie (puede ser necesario un adaptador USB a Serie en el PC)',
-    check_basic: 'Abre tu agente de IA y selecciona la skill de programación de CoCo-1 suministrada',
+    check_basic: 'Abre tu agente de IA en el PC y selecciona la skill de programación de CoCo-1 suministrada',
     check_sd: 'A partir de ahora ya puedes chatear con tu agente de IA y pedirle que codifique el programa que quieras hacer. De forma interactiva verás en la pantalla del CoCo-1 cómo va editando el programa y depurándolo hasta que funcione como tú deseas',
     check_sound: 'Una vez programado, el código queda guardado en el CoCo-1 para ejecutarlo o modificarlo a tu gusto',
     specs_title: 'Especificaciones',
@@ -61,26 +61,26 @@ const translations = {
     spec_dimensions: 'Dimensiones',
 
     // Testimonials
-    testimonials_title: 'Puerto IA + OpenCode + BASIC',
-    testimonials_subtitle: 'La combinación ganadora en IA',
-    testimonial_1_quote: 'El hardware del CoCo-1 dispone de un puerto de comunicación dedicado exclusivamente al diálogo con el agente de IA mediante una skill desarrollada a tal fin.',
+    testimonials_title: 'Puerto IA + OpenCode + Skill',
+    testimonials_subtitle: 'La combinación ganadora en IA Física',
+    testimonial_1_quote: 'El hardware del CoCo-1 incorpora un puerto de comunicación exclusivo para el diálogo con el agente de IA que se ejecuta en el PC lo que permite un control total.',
     testimonial_1_author: 'Puerto IA',
     testimonial_1_role: '',
-    testimonial_2_quote: 'OpenCode es el agente ideal para trabajar con CoCo-1 ya que es una solución de código abierto que incluye el uso de modelos gratis para la codificación.',
+    testimonial_2_quote: 'OpenCode es el agente ideal para trabajar con CoCo-1. Es una solución de código abierto que incluye el uso de modelos gratis para la codificación.',
     testimonial_2_author: 'Agente de IA',
     testimonial_2_role: '',
-    testimonial_3_quote: 'El lenguaje de programación BASIC es un lenguaje interpretado, interactivo y rápido que permite aumentar la eficiencia en los ciclos de codificación y depuración.',
-    testimonial_3_author: 'Lenguaje BASIC',
+    testimonial_3_quote: 'La Skill de BASIC facilita la codificación y depuración de forma interactiva sin usar herramientas de compilación, acortando los tiempos de desarrollo.',
+    testimonial_3_author: 'Skill BASIC',
     testimonial_3_role: '',
 
     // Preorder
     preorder_title: '¡Compra ahora!',
-    preorder_subtitle: 'Asegura tu CoCo-1 al precio especial de lanzamiento',
     preorder_description: 'Disponible en dos versiones igualmente funcionales que van desde la placa PCB con los componentes electrónicos ensamblados a la misma placa PCB en una elegante y robusta carcasa de plástico ABS con perfiles frontales y traseros serigrafiados.',
+    order_includes: 'El pedido incluye:',
     benefit_1: 'Hardware CoCo-1 en la versión elegida',
     benefit_2: 'Manual de Usuario en español en PDF',
     benefit_3: 'Cinco juegos precargados: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird y Welcome (una demostración gráfica)',
-    benefit_4: 'El envío no incluye pantalla, cable VGA, teclado USB, alimentador USB ni cable para el puerto IA que corren a cargo del cliente',
+    benefit_4: 'La compra no incluye pantalla, cable VGA, teclado USB, alimentador USB-C ni cable para el puerto IA que corren a cargo del cliente',
     form_title: 'Formulario de compra',
     form_subtitle: 'Cumplimenta el formulario con tus datos para procesar la compra',
     label_name: 'Nombre completo',
@@ -135,9 +135,9 @@ const translations = {
 
   en: {
     // Navigation
-    nav_features: 'Features',
+    nav_features: 'Specifications',
     nav_showcase: 'AI Mode',
-    nav_testimonials: 'AI Architecture',
+    nav_testimonials: 'AI Ecosystem',
     nav_preorder: 'Buy',
 
     // Hero
@@ -152,20 +152,20 @@ const translations = {
     new_price: '49,99€',
 
     // Features
-    features_title: 'Features',
+    features_title: 'Specifications',
     features_subtitle: 'Everything you need in a compact, powerful microcomputer',
     feature_1_title: 'VGA Output',
     feature_1_desc: '640x480 monochrome resolution or 320x240 with support for up to 16 colors.',
     feature_2_title: 'USB Keyboard',
-    feature_2_desc: 'Compatible with any standard PC keyboard. Configurable for ES, US, UK, DE, FR layouts. Accented uppercase and lowercase letters and special characters such as ñ on the Spanish keyboard.',
-    feature_3_title: 'Advanced BASIC',
-    feature_3_desc: 'BASIC interpreter compatible with Microsoft BASIC, with support for graphics commands, sound, and 64-bit arithmetic. Built-in editor for program editing with syntax highlighting.',
+    feature_2_desc: 'Compatible with any standard PC keyboard. Support for accented uppercase and lowercase letters and special characters such as ñ on the Spanish keyboard.',
+    feature_3_title: 'BASIC Interpreter',
+    feature_3_desc: 'Advanced BASIC interpreter compatible with Microsoft BASIC. Built-in editor for advanced program editing with syntax highlighting.',
     feature_4_title: 'SD Storage',
     feature_4_desc: 'SD card up to 32GB FAT16/FAT32. Activity LED for read/write operations.',
     feature_5_title: 'Graphics & Sound',
-    feature_5_desc: '16-color graphics, stereo sound, 8 font types, sprites ... Includes 5 games: Tetris, Asteroids, Space Invaders, PacMan, and Flappy Bird.',
+    feature_5_desc: '16-color graphics, stereo sound with volume control, 8 font types, sprites ... Includes 5 games: Tetris, Asteroids, Space Invaders, PacMan, and Flappy Bird.',
     feature_6_title: 'Interfaces',
-    feature_6_desc: '2 RS-232 serial ports, VGA, USB for keyboard, expansion connector with 11 digital or analog input/output pins, switch, and USB-C power.',
+    feature_6_desc: 'Two RS-232 serial ports, one of them dedicated exclusively as the AI port. Expansion connector with 11 programmable digital or analog input/output pins.',
 
     // Showcase
     showcase_title: 'Designed for AI',
@@ -173,7 +173,7 @@ const translations = {
     showcase_features: 'Configure AI mode',
     check_vga: 'Compatible with the most popular AI agents: Claude Code, OpenAI Codex, GitHub Copilot, OpenCode, etc',
     check_keyboard: 'Connect CoCo-1 to your Windows, Mac, or Linux computer through the serial port (a USB-to-serial adapter may be required on the PC)',
-    check_basic: 'Open your AI agent and select the included CoCo-1 programming skill',
+    check_basic: 'Open your AI agent on the PC and select the included CoCo-1 programming skill',
     check_sd: 'From now on, you can chat with your AI agent and ask it to code the program you want to create. Interactively, you will see on the CoCo-1 screen how it edits and debugs the program until it works the way you want',
     check_sound: 'Once programmed, the code remains saved on the CoCo-1 so you can run it or modify it however you like',
     specs_title: 'Specifications',
@@ -187,26 +187,26 @@ const translations = {
     spec_dimensions: 'Dimensions',
 
     // Testimonials
-    testimonials_title: 'AI Port + OpenCode + BASIC',
-    testimonials_subtitle: 'The winning combination in AI',
-    testimonial_1_quote: 'CoCo-1 hardware includes a communication port dedicated exclusively to dialogue with the AI agent through a skill developed for that purpose.',
+    testimonials_title: 'AI Port + OpenCode + Skill',
+    testimonials_subtitle: 'The winning combination in Physical AI',
+    testimonial_1_quote: 'CoCo-1 hardware includes an exclusive communication port for dialogue with the AI agent running on the PC, enabling full control.',
     testimonial_1_author: 'AI Port',
     testimonial_1_role: '',
-    testimonial_2_quote: 'OpenCode is the ideal agent for working with CoCo-1 because it is an open-source solution that includes the use of free models for coding.',
+    testimonial_2_quote: 'OpenCode is the ideal agent for working with CoCo-1. It is an open-source solution that includes the use of free models for coding.',
     testimonial_2_author: 'AI Agent',
     testimonial_2_role: '',
-    testimonial_3_quote: 'The BASIC programming language is an interpreted, interactive, and fast language that increases efficiency in coding and debugging cycles.',
-    testimonial_3_author: 'BASIC Language',
+    testimonial_3_quote: 'The BASIC skill makes interactive coding and debugging easier without using compilation tools, shortening development times.',
+    testimonial_3_author: 'BASIC Skill',
     testimonial_3_role: '',
 
     // Preorder
     preorder_title: 'Buy Now!',
-    preorder_subtitle: 'Get your CoCo-1 at the special launch price',
     preorder_description: 'Available in two equally functional versions, from the PCB board with assembled electronic components to the same PCB board in an elegant and robust ABS plastic case with screen-printed front and rear panels.',
+    order_includes: 'The order includes:',
     benefit_1: 'CoCo-1 hardware in the selected version',
     benefit_2: 'User manual in Spanish as a PDF',
     benefit_3: 'Five preloaded games: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird and Welcome (a graphical demo)',
-    benefit_4: 'Shipping does not include a screen, VGA cable, USB keyboard, USB power adapter, or AI port cable, which are the customer\'s responsibility',
+    benefit_4: 'The purchase does not include a screen, VGA cable, USB keyboard, USB-C power adapter, or AI port cable, which are the customer\'s responsibility',
     form_title: 'Purchase Form',
     form_subtitle: 'Complete your details to process your purchase',
     label_name: 'Full name',
@@ -427,8 +427,8 @@ function setLanguage(lang) {
 
   // Preorder
   document.getElementById('preorderTitle').textContent = t.preorder_title;
-  document.getElementById('preorderSubtitle').textContent = t.preorder_subtitle;
   document.getElementById('preorderDescription').textContent = t.preorder_description;
+  document.getElementById('orderIncludes').textContent = t.order_includes;
   document.getElementById('benefit1').textContent = t.benefit_1;
   document.getElementById('benefit2').textContent = t.benefit_2;
   document.getElementById('benefit3').textContent = t.benefit_3;
