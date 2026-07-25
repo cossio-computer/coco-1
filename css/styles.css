@@ -1238,12 +1238,33 @@ p { max-width: 65ch; }
 
   .price-badge {
     position: static;
-    margin-top: 1rem;
-    display: inline-block;
+    margin: 0.5rem auto 0;
+    transform: none;
+    display: flex;
+    width: 180px;
+    height: 146px;
+    padding: 0.75rem;
+    line-height: 1.1;
+    animation-name: pricePulseMobile;
+  }
+
+  .price-badge .launch-price {
+    font-size: 0.65rem;
+    line-height: 1;
+  }
+
+  .price-badge .new-price {
+    font-size: 1.35rem;
+    line-height: 1.1;
   }
 
   .hero-image {
-    padding: 0 2rem;
+    padding: 0 1rem;
+  }
+
+  .hero-image img {
+    max-width: min(105%, 440px);
+    transform: translateY(0.5rem);
   }
 }
 
@@ -1258,6 +1279,26 @@ p { max-width: 65ch; }
 
   .hero {
     padding: 80px 0 40px;
+    min-height: auto;
+  }
+
+  .hero .container {
+    gap: 1.5rem;
+  }
+
+  .hero-badge {
+    font-size: 0.78rem;
+    padding: 0.45rem 0.85rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.15rem, 12vw, 3rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-cta {
@@ -1271,6 +1312,21 @@ p { max-width: 65ch; }
   .preorder-form {
     padding: 1.5rem;
   }
+
+  .price-badge {
+    width: 160px;
+    height: 130px;
+    margin-top: 0.25rem;
+  }
+
+  .price-badge .new-price {
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes pricePulseMobile {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
 
 /* ============================================
