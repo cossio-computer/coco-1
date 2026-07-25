@@ -91,6 +91,7 @@ const translations = {
     label_postal_code: 'Código postal',
     placeholder_name: 'Nombre y apellidos',
     placeholder_address: 'Calle, número, piso',
+    placeholder_province: 'Provincia / región',
     placeholder_postal_code: '00000',
     label_country: 'País',
     label_quantity: 'Cantidad',
@@ -217,6 +218,7 @@ const translations = {
     label_postal_code: 'Postal code',
     placeholder_name: 'First and last name',
     placeholder_address: 'Street, number, apartment',
+    placeholder_province: 'Province / region',
     placeholder_postal_code: 'Postal code',
     label_country: 'Country',
     label_quantity: 'Quantity',
@@ -277,6 +279,7 @@ let formData = {
 };
 const PAYPAL_ME_LINK = 'https://paypal.me/cossiocomputer';
 const WEB3FORMS_ACCESS_KEY = '6b3962f8-decd-45a1-b57d-6b22d498f1a1';
+const ORDER_SUBMIT_TIMEOUT_MS = 10000;
 const BIZUM_PHONE = '655131003';
 const BIZUM_CONCEPT = 'CoCo-1';
 const SPANISH_PROVINCES = [
@@ -348,6 +351,7 @@ const quantitySelect = document.getElementById('quantity');
 const caseSelect = document.getElementById('caseOption');
 const countrySelect = document.getElementById('country');
 const provinceSelect = document.getElementById('provinceInput');
+const provinceTextInput = document.getElementById('provinceTextInput');
 const paypalBtn = document.querySelector('.btn-paypal');
 const bizumBtn = document.querySelector('.btn-bizum');
 const bizumModal = document.getElementById('bizumModal');
@@ -443,6 +447,7 @@ function setLanguage(lang) {
   document.getElementById('labelPostalCode').textContent = t.label_postal_code;
   document.getElementById('nameInput').placeholder = t.placeholder_name;
   document.getElementById('addressInput').placeholder = t.placeholder_address;
+  document.getElementById('provinceTextInput').placeholder = t.placeholder_province;
   document.getElementById('postalCodeInput').placeholder = t.placeholder_postal_code;
   document.getElementById('labelCountry').textContent = t.label_country;
   document.getElementById('labelQuantity').textContent = t.label_quantity;
@@ -467,13 +472,13 @@ function setLanguage(lang) {
 
   // Footer
   document.getElementById('footerDescription').textContent = t.footer_description;
-  document.getElementById('footerProduct').textContent = t.footer_product;
   document.getElementById('footerCompany').textContent = t.footer_company;
   document.getElementById('footerCopyright').textContent = t.footer_copyright;
 
   // Update country select options
   updateCountryOptions();
   updateProvinceOptions();
+  updateAddressFieldsMode();
 
   // Update prices display
   updatePrices();
@@ -523,6 +528,27 @@ function updateProvinceOptions() {
     SPANISH_PROVINCES.map(province => (
       `<option value="${province.code}" ${province.code === currentValue ? 'selected' : ''}>${province.name}</option>`
     )).join('');
+}
+
+function updateAddressFieldsMode() {
+  const isSpain = countrySelect?.value === 'ES';
+  const provinceLabel = document.getElementById('labelProvince');
+
+  if (!provinceSelect || !provinceTextInput) return;
+
+  provinceSelect.hidden = !isSpain;
+  provinceSelect.disabled = !isSpain;
+  provinceSelect.required = isSpain;
+  provinceSelect.name = isSpain ? 'province' : 'provinceCode';
+
+  provinceTextInput.hidden = isSpain;
+  provinceTextInput.disabled = isSpain;
+  provinceTextInput.required = !isSpain;
+  provinceTextInput.name = isSpain ? 'provinceText' : 'province';
+
+  if (provinceLabel) {
+    provinceLabel.setAttribute('for', isSpain ? 'provinceInput' : 'provinceTextInput');
+  }
 }
 
 // ============================================
@@ -605,6 +631,8 @@ function validatePaymentForm() {
   const provinceCode = provinceSelect?.value;
   const postalCode = document.getElementById('postalCodeInput')?.value.trim();
 
+  updateAddressFieldsMode();
+
   if (preorderForm && !preorderForm.reportValidity()) {
     return null;
   }
@@ -642,6 +670,14 @@ function getSelectedText(select) {
   return select?.selectedOptions?.[0]?.textContent || '';
 }
 
+function getProvinceValue() {
+  if (countrySelect?.value === 'ES') {
+    return getSelectedText(provinceSelect) || '-';
+  }
+
+  return provinceTextInput?.value.trim() || '-';
+}
+
 function getOrderData(paymentData, paymentMethod) {
   return {
     access_key: WEB3FORMS_ACCESS_KEY,
@@ -652,7 +688,7 @@ function getOrderData(paymentData, paymentMethod) {
     email: paymentData.email,
     phone: document.getElementById('phoneInput')?.value || '-',
     address: document.getElementById('addressInput')?.value || '-',
-    province: getSelectedText(provinceSelect),
+    province: getProvinceValue(),
     postalCode: document.getElementById('postalCodeInput')?.value || '-',
     country: getSelectedText(countrySelect),
     quantity: quantitySelect?.value || '1',
@@ -670,6 +706,9 @@ async function sendOrderData(paymentData, paymentMethod) {
     return false;
   }
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), ORDER_SUBMIT_TIMEOUT_MS);
+
   try {
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -678,6 +717,7 @@ async function sendOrderData(paymentData, paymentMethod) {
         Accept: 'application/json',
       },
       body: JSON.stringify(getOrderData(paymentData, paymentMethod)),
+      signal: controller.signal,
     });
     const result = await response.json();
 
@@ -689,6 +729,8 @@ async function sendOrderData(paymentData, paymentMethod) {
   } catch (error) {
     showNotification(t.notification_order_submit_error, 'error');
     return false;
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 
@@ -705,18 +747,33 @@ async function handlePayment(e) {
     return;
   }
 
-  paypalBtn.classList.add('loading');
-  paypalBtn.disabled = true;
+  const paypalUrl = `${PAYPAL_ME_LINK}/${getCurrentTotal().toFixed(2)}`;
+  const paypalWindow = window.open('about:blank', '_blank');
 
-  const orderSent = await sendOrderData(paymentData, 'PayPal.Me');
-
-  if (!orderSent) {
-    paypalBtn.classList.remove('loading');
-    paypalBtn.disabled = false;
-    return;
+  if (paypalWindow) {
+    paypalWindow.opener = null;
   }
 
-  window.open(`${PAYPAL_ME_LINK}/${getCurrentTotal().toFixed(2)}`, '_blank', 'noopener');
+  paypalBtn?.classList.add('loading');
+  paypalBtn.disabled = true;
+
+  try {
+    const orderSent = await sendOrderData(paymentData, 'PayPal.Me');
+
+    if (!orderSent) {
+      paypalWindow?.close();
+      return;
+    }
+
+    if (paypalWindow) {
+      paypalWindow.location.href = paypalUrl;
+    } else {
+      window.location.href = paypalUrl;
+    }
+  } finally {
+    paypalBtn?.classList.remove('loading');
+    paypalBtn.disabled = false;
+  }
 }
 
 function openBizumModal() {
@@ -865,7 +922,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================================
 quantitySelect?.addEventListener('change', updatePrices);
 caseSelect?.addEventListener('change', updatePrices);
-countrySelect?.addEventListener('change', updatePrices);
+countrySelect?.addEventListener('change', () => {
+  updateAddressFieldsMode();
+  updatePrices();
+});
 
 // Form input tracking
 preorderForm?.querySelectorAll('input, select').forEach(input => {
@@ -889,6 +949,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Populate country select
   updateCountryOptions();
+  updateAddressFieldsMode();
 
   // Initialize prices
   updatePrices();
