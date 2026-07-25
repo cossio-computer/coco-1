@@ -1159,6 +1159,11 @@ p { max-width: 65ch; }
     text-align: center;
   }
 
+  .showcase-content,
+  .showcase-list {
+    text-align: left;
+  }
+
   .showcase-image {
     justify-content: center;
     height: auto;
