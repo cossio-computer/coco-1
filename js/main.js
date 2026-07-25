@@ -18,7 +18,7 @@ const translations = {
     hero_badge: '¡El primer micro-ordenador programable por la IA!',
     hero_title: 'CoCo-1',
     hero_title_suffix: ' IA Ready Microcomputer',
-    hero_description: 'El primer micro-ordenador personal totalmente programable desde tu agente de IA en tu PC de una forma interactiva, rápida y sin necesidad de conocimientos previos de programación.',
+    hero_description: 'El primer micro-ordenador personal totalmente programable por tu agente de IA en tu PC de una forma interactiva, rápida y sin necesidad de conocimientos previos de programación.',
     hero_cta_primary: 'Comprar ahora',
     hero_cta_secondary: 'Saber más',
     launch_price: 'Desde',
@@ -34,12 +34,16 @@ const translations = {
     feature_2_desc: 'Compatible con cualquier teclado PC estándar. Soporte de mayúsculas y minúsculas acentuadas y caracteres especiales como la ñ en el teclado español.',
     feature_3_title: 'Intérprete BASIC',
     feature_3_desc: 'Intérprete de BASIC avanzado compatible con Microsoft BASIC. Editor incorporado para la edición avanzada de programas y con sintaxis coloreada.',
-    feature_4_title: 'Almacenamiento SD',
-    feature_4_desc: 'Tarjeta SD hasta 32GB FAT16/FAT32. LED de actividad para lectura/escritura.',
-    feature_5_title: 'Gráficos y sonido',
-    feature_5_desc: 'Gráficos 16 colores, sonido estéreo con control de volumen, 8 tipos de letra, sprites ... Incluye 5 juegos: Tetris, Asteroids, Space Invaders, PacMan y Flappy Bird.',
-    feature_6_title: 'Interfaces',
-    feature_6_desc: 'Dos puertos serie RS-232, uno de ellos dedicado en exclusiva como puerto IA. Conector de expansión con 11 pines programables de Entrada/Salida digitales o analógicas.',
+    feature_4_title: 'Tarjeta SD y Reloj',
+    feature_4_desc: 'Soporte de almacenamiento externo en tarjeta SD de hasta 32GB FAT16/FAT32 con LED de actividad lectura/escritura.',
+    feature_4_desc_2: 'Real-Time Clock (RTC) con pila para el manejo de la fecha y la hora.',
+    feature_5_title: 'Gráficos y Sonido',
+    feature_5_desc: 'Gráficos 16 colores, sonido estéreo con control de volumen, 8 tipos de letra, sprites ...',
+    feature_5_desc_2: 'Incluye cinco juegos: Tetris, Asteroids, Space Invaders, PacMan y Flappy Bird.',
+    feature_6_title: 'Interfaces y Alimentación',
+    feature_6_desc: 'Dos puertos serie RS-232, uno de ellos dedicado a control por IA.',
+    feature_6_desc_2: 'Conector expansión de 11 pines programables de Entrada/Salida digital o analógica.',
+    feature_6_desc_3: 'Alimentación por USB-C a 5V/1A.',
 
     // Showcase
     showcase_title: 'Diseñado para la IA',
@@ -75,10 +79,10 @@ const translations = {
 
     // Preorder
     preorder_title: '¡Compra ahora!',
-    preorder_description: 'Disponible en dos versiones igualmente funcionales que van desde la placa PCB con los componentes electrónicos ensamblados a la misma placa PCB en una elegante y robusta carcasa de plástico ABS con perfiles frontales y traseros serigrafiados.',
+    preorder_description: 'Disponible en dos versiones igualmente funcionales que van desde la placa PCB con los componentes electrónicos ensamblados a la misma placa PCB en una elegante y robusta carcasa de plástico ABS con perfiles frontal y trasero serigrafiados.',
     order_includes: 'El pedido incluye:',
     benefit_1: 'Hardware CoCo-1 en la versión elegida',
-    benefit_2: 'Manual de Usuario en español en PDF',
+    benefit_2: 'Manual de Usuario en español y en formato PDF',
     benefit_3: 'Cinco juegos precargados: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird y Welcome (una demostración gráfica)',
     benefit_4: 'La compra no incluye pantalla, cable VGA, teclado USB, alimentador USB-C ni cable para el puerto IA que corren a cargo del cliente',
     form_title: 'Formulario de compra',
@@ -89,7 +93,7 @@ const translations = {
     label_address: 'Dirección',
     label_province: 'Provincia',
     label_postal_code: 'Código postal',
-    placeholder_name: 'Nombre y apellidos',
+    placeholder_name: 'Nombre y Apellidos',
     placeholder_address: 'Calle, número, piso',
     placeholder_province: 'Provincia / región',
     placeholder_postal_code: '00000',
@@ -161,12 +165,16 @@ const translations = {
     feature_2_desc: 'Compatible with any standard PC keyboard. Support for accented uppercase and lowercase letters and special characters such as ñ on the Spanish keyboard.',
     feature_3_title: 'BASIC Interpreter',
     feature_3_desc: 'Advanced BASIC interpreter compatible with Microsoft BASIC. Built-in editor for advanced program editing with syntax highlighting.',
-    feature_4_title: 'SD Storage',
-    feature_4_desc: 'SD card up to 32GB FAT16/FAT32. Activity LED for read/write operations.',
+    feature_4_title: 'SD Card and RTC',
+    feature_4_desc: 'External storage support on SD card up to 32GB FAT16/FAT32 with read/write activity LED.',
+    feature_4_desc_2: 'Real Time Clock (RTC) with battery backup for date and time support.',
     feature_5_title: 'Graphics & Sound',
-    feature_5_desc: '16-color graphics, stereo sound with volume control, 8 font types, sprites ... Includes 5 games: Tetris, Asteroids, Space Invaders, PacMan, and Flappy Bird.',
-    feature_6_title: 'Interfaces',
-    feature_6_desc: 'Two RS-232 serial ports, one of them dedicated exclusively as the AI port. Expansion connector with 11 programmable digital or analog input/output pins.',
+    feature_5_desc: '16-color graphics, stereo sound with volume control, 8 font types, sprites ...',
+    feature_5_desc_2: 'Includes 5 games: Tetris, Asteroids, Space Invaders, PacMan, and Flappy Bird.',
+    feature_6_title: 'Interfaces and Power',
+    feature_6_desc: 'Two RS-232 serial ports, one of them dedicated to AI control.',
+    feature_6_desc_2: 'Expansion connector with 11 programmable digital or analog input/output pins.',
+    feature_6_desc_3: 'Power via USB-C at 5V/1A.',
 
     // Showcase
     showcase_title: 'Designed for AI',
@@ -205,7 +213,7 @@ const translations = {
     preorder_description: 'Available in two equally functional versions, from the PCB board with assembled electronic components to the same PCB board in an elegant and robust ABS plastic case with screen-printed front and rear panels.',
     order_includes: 'The order includes:',
     benefit_1: 'CoCo-1 hardware in the selected version',
-    benefit_2: 'User manual in Spanish as a PDF',
+    benefit_2: 'User manual in Spanish and PDF format',
     benefit_3: 'Five preloaded games: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird and Welcome (a graphical demo)',
     benefit_4: 'The purchase does not include a screen, VGA cable, USB keyboard, USB-C power adapter, or AI port cable, which are the customer\'s responsibility',
     form_title: 'Purchase Form',
@@ -402,10 +410,14 @@ function setLanguage(lang) {
   document.getElementById('feature3Desc').textContent = t.feature_3_desc;
   document.getElementById('feature4Title').textContent = t.feature_4_title;
   document.getElementById('feature4Desc').textContent = t.feature_4_desc;
+  document.getElementById('feature4Desc2').textContent = t.feature_4_desc_2;
   document.getElementById('feature5Title').textContent = t.feature_5_title;
   document.getElementById('feature5Desc').textContent = t.feature_5_desc;
+  document.getElementById('feature5Desc2').textContent = t.feature_5_desc_2;
   document.getElementById('feature6Title').textContent = t.feature_6_title;
   document.getElementById('feature6Desc').textContent = t.feature_6_desc;
+  document.getElementById('feature6Desc2').textContent = t.feature_6_desc_2;
+  document.getElementById('feature6Desc3').textContent = t.feature_6_desc_3;
 
   // Showcase
   document.getElementById('showcaseTitle').textContent = t.showcase_title;
@@ -586,7 +598,7 @@ function getShippingDescription() {
 
 function getShippingLabel() {
   if (countrySelect?.value === 'ES') {
-    return currentLang === 'es' ? 'Envío estándar (5-7 días)' : 'Standard shipping (5-7 days)';
+    return currentLang === 'es' ? 'Envío estándar (5 - 7 días)' : 'Standard shipping (5 - 7 days)';
   }
 
   return currentLang === 'es' ? 'Envío Internacional (15 días)' : 'International shipping (15 days)';
