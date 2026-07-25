@@ -862,7 +862,9 @@ function showNotification(message, type = 'info') {
 // MOBILE MENU
 // ============================================
 function toggleMobileMenu() {
-  navLinksContainer.classList.toggle('active');
+  const isOpen = navLinksContainer.classList.toggle('active');
+  mobileMenuBtn?.classList.toggle('active', isOpen);
+  mobileMenuBtn?.setAttribute('aria-expanded', String(isOpen));
 }
 
 mobileMenuBtn?.addEventListener('click', toggleMobileMenu);
@@ -871,6 +873,8 @@ mobileMenuBtn?.addEventListener('click', toggleMobileMenu);
 navLinksContainer?.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinksContainer.classList.remove('active');
+    mobileMenuBtn?.classList.remove('active');
+    mobileMenuBtn?.setAttribute('aria-expanded', 'false');
   });
 });
 
