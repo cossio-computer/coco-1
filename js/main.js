@@ -698,6 +698,10 @@ function getOrderData(paymentData, paymentMethod) {
   };
 }
 
+function isMobileDevice() {
+  return window.matchMedia('(max-width: 768px)').matches;
+}
+
 async function sendOrderData(paymentData, paymentMethod) {
   const t = translations[currentLang];
 
@@ -748,7 +752,8 @@ async function handlePayment(e) {
   }
 
   const paypalUrl = `${PAYPAL_ME_LINK}/${getCurrentTotal().toFixed(2)}`;
-  const paypalWindow = window.open('about:blank', '_blank');
+  const opensInSameTab = isMobileDevice();
+  const paypalWindow = opensInSameTab ? null : window.open('about:blank', '_blank');
 
   if (paypalWindow) {
     paypalWindow.opener = null;
@@ -765,7 +770,9 @@ async function handlePayment(e) {
       return;
     }
 
-    if (paypalWindow) {
+    if (opensInSameTab) {
+      window.location.href = paypalUrl;
+    } else if (paypalWindow) {
       paypalWindow.location.href = paypalUrl;
     } else {
       window.location.href = paypalUrl;
