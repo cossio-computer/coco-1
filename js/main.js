@@ -65,7 +65,7 @@ const translations = {
     spec_dimensions: 'Dimensiones',
 
     // Testimonials
-    testimonials_title: 'Puerto IA + OpenCode + Skill',
+    testimonials_title: 'Puerto IA + Agente IA + Skill IA',
     testimonials_subtitle: 'La combinación ganadora en IA Física',
     testimonial_1_quote: 'El hardware del CoCo-1 incorpora un puerto de comunicación exclusivo para el diálogo con el agente de IA que se ejecuta en el PC lo que permite un control total.',
     testimonial_1_author: 'Puerto IA',
@@ -73,18 +73,18 @@ const translations = {
     testimonial_2_quote: 'OpenCode es el agente ideal para trabajar con CoCo-1. Es una solución de código abierto que incluye el uso de modelos gratis para la codificación.',
     testimonial_2_author: 'Agente de IA',
     testimonial_2_role: '',
-    testimonial_3_quote: 'La Skill de BASIC facilita la codificación y depuración de forma interactiva sin usar herramientas de compilación, acortando los tiempos de desarrollo.',
-    testimonial_3_author: 'Skill BASIC',
+    testimonial_3_quote: 'La Skill CoCo-1 facilita la codificación y depuración ya que incorpora una descripción hardware completa y numerosas reglas seguras (guardarraíles).',
+    testimonial_3_author: 'Skill IA',
     testimonial_3_role: '',
 
     // Preorder
     preorder_title: '¡Compra ahora!',
     preorder_description: 'Disponible en dos versiones igualmente funcionales que van desde la placa PCB con los componentes electrónicos ensamblados a la misma placa PCB en una elegante y robusta carcasa de plástico ABS con perfiles frontal y trasero serigrafiados.',
     order_includes: 'El pedido incluye:',
-    benefit_1: 'Hardware CoCo-1 en la versión elegida',
+    benefit_1: 'Hardware CoCo-1 en la versión elegida y Skill de IA',
     benefit_2: 'Manual de Usuario en español y en formato PDF',
     benefit_3: 'Cinco juegos precargados: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird y Welcome (una demostración gráfica)',
-    benefit_4: 'La compra no incluye pantalla, cable VGA, teclado USB, alimentador USB-C ni cable para el puerto IA que corren a cargo del cliente',
+    benefit_4: 'No se incluye pantalla, cable VGA, teclado USB, alimentador USB-C ni cable para el puerto IA',
     form_title: 'Formulario de compra',
     form_subtitle: 'Cumplimenta el formulario con tus datos para procesar la compra',
     label_name: 'Nombre completo',
@@ -196,7 +196,7 @@ const translations = {
     spec_dimensions: 'Dimensions',
 
     // Testimonials
-    testimonials_title: 'AI Port + OpenCode + Skill',
+    testimonials_title: 'AI Port + AI Agent + AI Skill',
     testimonials_subtitle: 'The winning combination in Physical AI',
     testimonial_1_quote: 'CoCo-1 hardware includes an exclusive communication port for dialogue with the AI agent running on the PC, enabling full control.',
     testimonial_1_author: 'AI Port',
@@ -204,18 +204,18 @@ const translations = {
     testimonial_2_quote: 'OpenCode is the ideal agent for working with CoCo-1. It is an open-source solution that includes the use of free models for coding.',
     testimonial_2_author: 'AI Agent',
     testimonial_2_role: '',
-    testimonial_3_quote: 'The BASIC skill makes interactive coding and debugging easier without using compilation tools, shortening development times.',
-    testimonial_3_author: 'BASIC Skill',
+    testimonial_3_quote: 'The CoCo-1 Skill makes coding and debugging easier because it includes a complete hardware description and numerous safe guardrails.',
+    testimonial_3_author: 'AI Skill',
     testimonial_3_role: '',
 
     // Preorder
     preorder_title: 'Buy Now!',
     preorder_description: 'Available in two equally functional versions, from the PCB board with assembled electronic components to the same PCB board in an elegant and robust ABS plastic case with screen-printed front and rear panels.',
     order_includes: 'The order includes:',
-    benefit_1: 'CoCo-1 hardware in the selected version',
+    benefit_1: 'CoCo-1 hardware in the selected version and AI Skill',
     benefit_2: 'User manual in Spanish and PDF format',
     benefit_3: 'Five preloaded games: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird and Welcome (a graphical demo)',
-    benefit_4: 'The purchase does not include a screen, VGA cable, USB keyboard, USB-C power adapter, or AI port cable, which are the customer\'s responsibility',
+    benefit_4: 'Screen, VGA cable, USB keyboard, USB-C power adapter, and AI port cable are not included',
     form_title: 'Purchase Form',
     form_subtitle: 'Complete your details to process your purchase',
     label_name: 'Full name',
