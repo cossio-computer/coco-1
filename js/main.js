@@ -18,7 +18,7 @@ const translations = {
     hero_badge: '¡El primer micro-ordenador programable por la IA!',
     hero_title: 'CoCo-1',
     hero_title_suffix: ' IA Ready Microcomputer',
-    hero_description: 'El primer micro-ordenador personal totalmente programable por tu agente de IA en tu PC de una forma interactiva, rápida y sin necesidad de conocimientos previos de programación.',
+    hero_description: 'El primer micro-ordenador personal totalmente programable por tu agente de IA (chatGPT, Copilot, Claude, OpenCode, etc.) en tu PC de forma interactiva, rápida y sin necesidad de conocimientos previos de programación.',
     hero_cta_primary: 'Comprar ahora',
     hero_cta_secondary: 'Saber más',
     launch_price: 'Desde',
@@ -27,19 +27,21 @@ const translations = {
 
     // Features
     features_title: 'Especificaciones',
-    features_subtitle: 'Todo lo que necesitas en un microordenador compacto y potente',
+    features_subtitle: 'Todo lo que necesitas en un micro-ordenador compacto y potente',
     feature_1_title: 'Salida VGA',
     feature_1_desc: 'Resolución 640x480 monocromo o 320x240 con soporte de hasta 16 colores.',
+    feature_1_desc_2: 'El conector VGA es compatible con los adaptadores HDMI a VGA (no incluido).',
     feature_2_title: 'Teclado USB',
     feature_2_desc: 'Compatible con cualquier teclado PC estándar. Soporte de mayúsculas y minúsculas acentuadas y caracteres especiales como la ñ en el teclado español.',
     feature_3_title: 'Intérprete BASIC',
-    feature_3_desc: 'Intérprete de BASIC avanzado compatible con Microsoft BASIC. Editor incorporado para la edición avanzada de programas y con sintaxis coloreada.',
+    feature_3_desc: 'Intérprete BASIC avanzado compatible con MS-BASIC. Incluye un editor, con sintaxis coloreada, para la edición de programas.',
+    feature_3_desc_2: 'Memoria Flash interna no volátil de 16MB para almacenar datos y programas.',
     feature_4_title: 'Tarjeta SD y Reloj',
     feature_4_desc: 'Soporte de almacenamiento externo en tarjeta SD de hasta 32GB FAT16/FAT32 con LED de actividad lectura/escritura.',
     feature_4_desc_2: 'Real-Time Clock (RTC) con pila para el manejo de la fecha y la hora.',
     feature_5_title: 'Gráficos y Sonido',
     feature_5_desc: 'Gráficos 16 colores, sonido estéreo con control de volumen, 8 tipos de letra, sprites ...',
-    feature_5_desc_2: 'Incluye cinco juegos: Tetris, Asteroids, Space Invaders, PacMan y Flappy Bird.',
+    feature_5_desc_2: 'Incluye seis juegos: Tetris, Asteroids, Space Invaders, Pac-Man, Flappy Bird, Light Cycle y Welcome (demo gráfica).',
     feature_6_title: 'Interfaces y Alimentación',
     feature_6_desc: 'Dos puertos serie RS-232, uno de ellos dedicado a control por IA.',
     feature_6_desc_2: 'Conector expansión de 11 pines programables de Entrada/Salida digital o analógica.',
@@ -71,7 +73,7 @@ const translations = {
     testimonial_1_author: 'Puerto IA',
     testimonial_1_role: '',
     testimonial_2_quote: 'OpenCode es el agente ideal para trabajar con CoCo-1. Es una solución de código abierto que incluye el uso de modelos gratis para la codificación.',
-    testimonial_2_author: 'Agente de IA',
+    testimonial_2_author: 'Agente IA',
     testimonial_2_role: '',
     testimonial_3_quote: 'La Skill CoCo-1 facilita la codificación y depuración ya que incorpora una descripción hardware completa y numerosas reglas seguras (guardarraíles).',
     testimonial_3_author: 'Skill IA',
@@ -83,7 +85,7 @@ const translations = {
     order_includes: 'El pedido incluye:',
     benefit_1: 'Hardware CoCo-1 en la versión elegida y Skill de IA',
     benefit_2: 'Manual de Usuario en español y en formato PDF',
-    benefit_3: 'Cinco juegos precargados: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird y Welcome (una demostración gráfica)',
+    benefit_3: 'Seis juegos precargados: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird, Light Cycle y Welcome (una demostración gráfica)',
     benefit_4: 'No se incluye pantalla, cable VGA, teclado USB, alimentador USB-C ni cable para el puerto IA',
     form_title: 'Formulario de compra',
     form_subtitle: 'Cumplimenta el formulario con tus datos para procesar la compra',
@@ -149,7 +151,7 @@ const translations = {
     hero_badge: 'The first AI-programmable microcomputer!',
     hero_title: 'CoCo-1',
     hero_title_suffix: ' AI Ready Microcomputer',
-    hero_description: 'The first personal microcomputer fully programmable from your AI agent on your PC in an interactive, fast way, with no prior programming knowledge required.',
+    hero_description: 'The first personal microcomputer fully programmable by your AI agent (ChatGPT, Copilot, Claude, OpenCode, etc.) on your PC in an interactive, fast way, with no prior programming knowledge required.',
     hero_cta_primary: 'Buy Now',
     hero_cta_secondary: 'Learn More',
     launch_price: 'From',
@@ -161,16 +163,18 @@ const translations = {
     features_subtitle: 'Everything you need in a compact, powerful microcomputer',
     feature_1_title: 'VGA Output',
     feature_1_desc: '640x480 monochrome resolution or 320x240 with support for up to 16 colors.',
+    feature_1_desc_2: 'The VGA connector is compatible with HDMI to VGA adapters (not included).',
     feature_2_title: 'USB Keyboard',
     feature_2_desc: 'Compatible with any standard PC keyboard. Support for accented uppercase and lowercase letters and special characters such as ñ on the Spanish keyboard.',
     feature_3_title: 'BASIC Interpreter',
-    feature_3_desc: 'Advanced BASIC interpreter compatible with Microsoft BASIC. Built-in editor for advanced program editing with syntax highlighting.',
+    feature_3_desc: 'Advanced BASIC interpreter compatible with MS-BASIC. Includes an editor, with syntax highlighting, for editing programs.',
+    feature_3_desc_2: '16MB non-volatile internal Flash memory for storing data and programs.',
     feature_4_title: 'SD Card and RTC',
     feature_4_desc: 'External storage support on SD card up to 32GB FAT16/FAT32 with read/write activity LED.',
     feature_4_desc_2: 'Real Time Clock (RTC) with battery backup for date and time support.',
     feature_5_title: 'Graphics & Sound',
     feature_5_desc: '16-color graphics, stereo sound with volume control, 8 font types, sprites ...',
-    feature_5_desc_2: 'Includes 5 games: Tetris, Asteroids, Space Invaders, PacMan, and Flappy Bird.',
+    feature_5_desc_2: 'Includes six games: Tetris, Asteroids, Space Invaders, Pac-Man, Flappy Bird, Light Cycle, and Welcome (graphical demo).',
     feature_6_title: 'Interfaces and Power',
     feature_6_desc: 'Two RS-232 serial ports, one of them dedicated to AI control.',
     feature_6_desc_2: 'Expansion connector with 11 programmable digital or analog input/output pins.',
@@ -214,7 +218,7 @@ const translations = {
     order_includes: 'The order includes:',
     benefit_1: 'CoCo-1 hardware in the selected version and AI Skill',
     benefit_2: 'User manual in Spanish and PDF format',
-    benefit_3: 'Five preloaded games: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird and Welcome (a graphical demo)',
+    benefit_3: 'Six preloaded games: Tetris, Pac-Man, Asteroids, Space Invaders, Flappy Bird, Light Cycle, and Welcome (a graphical demo)',
     benefit_4: 'Screen, VGA cable, USB keyboard, USB-C power adapter, and AI port cable are not included',
     form_title: 'Purchase Form',
     form_subtitle: 'Complete your details to process your purchase',
@@ -404,10 +408,12 @@ function setLanguage(lang) {
   document.getElementById('featuresSubtitle').textContent = t.features_subtitle;
   document.getElementById('feature1Title').textContent = t.feature_1_title;
   document.getElementById('feature1Desc').textContent = t.feature_1_desc;
+  document.getElementById('feature1Desc2').textContent = t.feature_1_desc_2;
   document.getElementById('feature2Title').textContent = t.feature_2_title;
   document.getElementById('feature2Desc').textContent = t.feature_2_desc;
   document.getElementById('feature3Title').textContent = t.feature_3_title;
   document.getElementById('feature3Desc').textContent = t.feature_3_desc;
+  document.getElementById('feature3Desc2').textContent = t.feature_3_desc_2;
   document.getElementById('feature4Title').textContent = t.feature_4_title;
   document.getElementById('feature4Desc').textContent = t.feature_4_desc;
   document.getElementById('feature4Desc2').textContent = t.feature_4_desc_2;
